@@ -10,7 +10,7 @@ DISPLAY_CATEGORIES_ON_MENU = 'True'
 PAGE_EXCLUDES = ()
 SITENAME = 'wongdev.com'
 SITESUBTITLE = ''
-SITEURL = 'http://localhost:8000'
+SITEURL = ''
 STATIC_PATHS = ['images']
 TIMEZONE = 'Australia/Sydney'
 SUMMARY_MAX_LENGTH = 50
@@ -45,8 +45,6 @@ DEFAULT_ORPHANS = 0
 DEFAULT_PAGINATION = 5
 
 THEME = '/home/w0ng/www/blog/wongdev-theme'
-GOOGLE_ANALYTICS = 'UA-37775953-1'
-DISQUS_SITENAME = 'wongdev'
 
 PAGINATION_PATTERNS = (
     (1, '{base_name}/', '{base_name}/index.html'),
