@@ -1,0 +1,4 @@
+*.pid
+Makefile
+content/images/*
+output/*

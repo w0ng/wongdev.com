@@ -1,0 +1,56 @@
+
+/* "Trac" color style - from bitbucket.org */
+
+.c  { color: #998; font-style: italic } /* Comment */
+.err { color: #a61717; background-color: #e3d2d2 } /* Error */
+.cm { color: #998; font-style: italic } /* Comment.Multiline */
+.c1 { color: #998; font-style: italic } /* Comment.Single */
+.cs { color: #999; font-style: italic } /* Comment.Special */
+.gd { color: #000; background-color: #fdd } /* Generic.Deleted */
+.ge { font-style: italic } /* Generic.Emph */
+.gr { color: #a00 } /* Generic.Error */
+.gh { color: #999 } /* Generic.Heading */
+.gi { color: #000; background-color: #dfd } /* Generic.Inserted */
+.go { color: #888 } /* Generic.Output */
+.gp { color: #555 } /* Generic.Prompt */
+.gu { color: #aaa } /* Generic.Subheading */
+.gt { color: #a00 } /* Generic.Traceback */
+.k  { color: #004080 }
+.kc { color: #004080 }
+.kd { color: #004080 }
+.kp { color: #004080 }
+.kr { color: #004080 }
+.kt { color: #458 } /* Keyword.Type */
+.m  { color: #099 } /* Literal.Number */
+.s  { color: #963 } /* Literal.String */
+.na { color: #008080 } /* Name.Attribute */
+.nb { color: #999 } /* Name.Builtin */
+.nc { color: #458 } /* Name.Class */
+.no { color: #008080 } /* Name.Constant */
+.ni { color: #800080 } /* Name.Entity */
+.ne { color: #900 } /* Name.Exception */
+.nf { color: #900 } /* Name.Function */
+.nn { color: #555 } /* Name.Namespace */
+.nt { color: #000080 } /* Name.Tag */
+.nv { color: #008080 } /* Name.Variable */
+.w  { color: #bbb } /* Text.Whitespace */
+.mf { color: #099 } /* Literal.Number.Float */
+.mh { color: #099 } /* Literal.Number.Hex */
+.mi { color: #099 } /* Literal.Number.Integer */
+.mo { color: #099 } /* Literal.Number.Oct */
+.sb { color: #963 } /* Literal.String.Backtick */
+.sc { color: #963 } /* Literal.String.Char */
+.sd { color: #963 } /* Literal.String.Doc */
+.s2 { color: #963 } /* Literal.String.Double */
+.se { color: #963 } /* Literal.String.Escape */
+.sh { color: #963 } /* Literal.String.Heredoc */
+.si { color: #963 } /* Literal.String.Interpol */
+.sx { color: #963 } /* Literal.String.Other */
+.sr { color: #808000 } /* Literal.String.Regex */
+.s1 { color: #963 } /* Literal.String.Single */
+.ss { color: #963 } /* Literal.String.Symbol */
+.bp { color: #999 } /* Name.Builtin.Pseudo */
+.vc { color: #008080 } /* Name.Variable.Class */
+.vg { color: #008080 } /* Name.Variable.Global */
+.vi { color: #008080 } /* Name.Variable.Instance */
+.il { color: #099 } /* Literal.Number.Integer.Long */

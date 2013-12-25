@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}{{ SITENAME }} - Categories{% endblock title %}
+{% set active_menu = 'Categories' %}
+{% block content %}
+<h1>Categories</h1>
+<ul class="count-list">
+{% for category, articles in categories|sort %}
+    <li class="count">{{ articles|count }} article{% if articles|count != 1 %}s{% endif %}</li>
+    <li><a href="{{ SITEURL }}/{{ category.url }}">{{ category }}</a></li>
+{% endfor %}
+</ul>
+{% endblock %}
