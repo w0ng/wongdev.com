@@ -1,4 +1,6 @@
 wongdev.com
 ===========
 
-Personal website generated with Pelican
+Source for <http://wongdev.com>, created with
+[Pelican](http://blog.getpelican.com/) - a static site generator powered by
+Python.
