@@ -39,7 +39,6 @@ ARCHIVES_URL = 'archives/'
 ARCHIVES_SAVE_AS = 'archives/index.html'
 
 FEED_ALL_ATOM = 'feeds/all.atom.xml'
-FEED_ALL_RSS = 'feed/all.rss.xml'
 
 DEFAULT_ORPHANS = 0
 DEFAULT_PAGINATION = 5
