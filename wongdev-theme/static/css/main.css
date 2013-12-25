@@ -3,13 +3,13 @@
 body {
   background: #fff;
   color: #333;
-  font: 18px "Open Sans", sans-serif;
+  font: 16px "Open Sans", sans-serif;
   line-height: 1.5em;
-  margin: 60px 18px;
+  margin: 60px 16px;
 }
 
 #wrap {
-  max-width: 42em;
+  max-width: 40em;
   margin: 0 auto;
 }
 
@@ -53,7 +53,7 @@ pre {
 }
 
 code {
-  font-size: 1em;
+  padding: 1px;
 }
 
 header {
