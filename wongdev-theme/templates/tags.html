@@ -2,11 +2,11 @@
 {% block title %}{{ SITENAME }} - Tags{% endblock %}
 {% set active_menu = 'Tags' %}
 {% block content %}
-<h1>Tags</h1>
-<ul class="count-list">
-{%- for tag, articles in tags|sort %}
-    <li class="count">{{ articles|count }} article{% if articles|count != 1 %}s{% endif %}</li>
-    <li><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a></li>
-{% endfor %}
-</ul>
+      <h1>Tags</h1>
+      <ul class="no-marker">
+      {% for tag, articles in tags|sort %}
+        <li class="entry-count item-info">{{ articles|count }} article{% if articles|count != 1 %}s{% endif %}</li>
+        <li><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a></li>
+      {% endfor %}
+      </ul>
 {% endblock %}

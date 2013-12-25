@@ -1,25 +1,20 @@
 {% extends "base.html" %}
 {% block content %}
-{% block content_title %}<h1>All articles</h1>{% endblock %}
+      <h1>{% block content_title %}All articles{% endblock %}</h1>
 
-<ol id="post-list">
-{% for article in articles_page.object_list %}
-        <li><article class="hentry">
-              <header><h2 class="entry-title{% if loop.first %} top-entry{% endif %}"><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h2> </header>
-                <footer class="post-info">
-                    <abbr class="published" title="{{ article.date.isoformat() }}"> {{ article.locale_date }} </abbr>
-                    {% if article.author %}<address class="vcard author">By <a class="url fn" href="{{ SITEURL }}/{{ article.author.url }}">{{ article.author }}</a></address>{% endif %}
-                    <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a> | 
-                    <ul class="post-tags">
-                    {% for tag in article.tags|sort %}
-                        <li><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>{% if not loop.last %}, {% endif %}</li>
-                    {% endfor %}
-                    </ul>
-                </footer><!-- /.post-info -->
-                <div class="entry-content"> {{ article.summary }} </div><!-- /.entry-content -->
-        </article></li>
-{% endfor %}
-</ol><!-- /#posts-list -->
-{% include 'pagination.html' %}
-</section><!-- /#content -->
+      <ol class="no-marker">
+        {% for article in articles_page.object_list %}
+        <li>
+          <article class="entry">
+            <header>
+              <h2{% if loop.first %} class="first-entry"{% endif %}><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h2>
+            </header>
+            {% include 'article-footer.html' %}
+            {{ article.summary }}
+          </article><!-- /.entry -->
+        </li>
+
+        {% endfor %}
+      </ol>
+      {% include 'pagination.html' %}
 {% endblock content %}

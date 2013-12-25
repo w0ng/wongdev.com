@@ -2,12 +2,11 @@
 {% block title %}{{ SITENAME }} - Archives{% endblock title %}
 {% set active_menu = 'Archives' %}
 {% block content %}
-<h1>Archives</h1>
-
-<dl id=archives>
-{% for article in dates %}
-    <dt>{{ article.locale_date }}</dt>
-    <dd><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></dd>
-{% endfor %}
-</dl>
+      <h1>Archives</h1>
+      <dl>
+      {% for article in dates %}
+        <dt class="archive-term item-info">{{ article.locale_date }}</dt>
+        <dd><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></dd>
+      {% endfor %}
+      </dl>
 {% endblock %}
