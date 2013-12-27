@@ -153,8 +153,8 @@ Mount the subvolumes:
     :::text
     cd
     umount /mnt
-    mkdir /mnt/{home,var}
     mount -o subvol=__active/rootvol /dev/sda /mnt
+    mkdir /mnt/{home,var}
     mount -o subvol=__active/home /dev/sda /mnt/home
     mount -o subvol=__active/var /dev/sda /mnt/var
 
@@ -191,6 +191,10 @@ options based on [ArchWiki][archbtrfs] recommendations:
 Utilising its COW capabilities, users are able to manage snapshots in btrfs.
 Snapshots are a cheap way of backing up and restoring data. A snapshot freezes
 the state of the system at a point in time rather than duplicating content.
+
+In order to access btrfs utilities, install `btrfs-progs`:
+
+    pacman -S btrfs-progs
 
 To perform a read-only snapshot on each subvolume:
 

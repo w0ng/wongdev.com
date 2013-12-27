@@ -6,8 +6,7 @@
   {% endblock %}
   <title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
   <link rel="stylesheet" href="{{ SITEURL }}/theme/css/{{ CSS_FILE }}">
-  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic">
-  <link rel="styelsheet" href="http://fonts.googleapis.com/css?family=Inconsolata">
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic|Inconsolata:400" rel="stylesheet" type="text/css">
   {% if FEED_ALL_ATOM %}
   <link rel="alternate" type="application/atom+xml" href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" title="{{ SITENAME }} Full Atom Feed">
   {% endif %}
@@ -26,7 +25,7 @@
     <header id="masthead" class="center">
       <h1><a href="{{ SITEURL }}" id="logo" class="heading-link">{{ SITENAME }}{% if SITESUBTITLE %} <strong>{{ SITESUBTITLE }}</strong>{% endif %}</a></h1>
       <nav>
-        <ul>
+        <ul class="inline-block">
           <li class="inline-block menu-item">:: <a href="{{ SITEURL }}/{{ ARCHIVES_URL }}" class="heading-link{%if active_menu == 'Archives' %} active{% endif %}">Archives</a></li>
           {% if categories|length > 1 %}
           <li class="inline-block menu-item">:: <a href="{{ SITEURL }}/{{ CATEGORIES_URL }}" class="heading-link{%if active_menu == 'Categories' %} active{% endif %}">Categories</a></li>
