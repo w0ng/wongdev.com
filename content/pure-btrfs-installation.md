@@ -228,7 +228,7 @@ old snapshot to the original location.
     :::text
     cd /mnt/defvol
     mv __active/rootvol __active/rootvol-bad
-    btrfs subvolume snapshot __snapshots/root-2013-12-27 __active/root
+    btrfs subvolume snapshot __snapshots/root-2013-12-27 __active/rootvol
 
 For writeable snapshots, we can simply move the old snapshot back to the
 original location.
@@ -236,6 +236,6 @@ original location.
     :::text
     cd /mnt/defvol
     mv __active/rootvol __active/rootvol-bad
-    mv __snapshots/root-2013-12-27 __active/root
+    mv __snapshots/root-2013-12-27 __active/rootvol
 
 Changes take effect after rebooting.
