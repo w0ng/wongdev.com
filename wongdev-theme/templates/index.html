@@ -1,20 +1,20 @@
 {% extends "base.html" %}
 {% block content %}
-      <h1>{% block content_title %}All articles{% endblock %}</h1>
+<h1 class="content-title">{% block content_title %}All articles{% endblock %} <span class="count">({{ articles|count }})</span></h1>
 
-      <ol class="no-marker">
-        {% for article in articles_page.object_list %}
-        <li>
-          <article class="entry">
-            <header>
-              <h2{% if loop.first %} class="first-entry"{% endif %}><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h2>
-            </header>
-            {% include 'article-footer.html' %}
-            {{ article.summary }}
-          </article><!-- /.entry -->
-        </li>
+            <ol id="article-list"{% if DEFAULT_PAGINATION %} start="{{ ((articles_page.number - 1) * DEFAULT_PAGINATION) + 1}}"{% endif %}>
+                {% for article in articles_page.object_list %}
+                <li class="count">
+                    <article class="entry">
+                        <header>
+                            <h2{% if loop.first %} id="top-entry"{% endif %}><a rel="bookmark" href="{{ SITEURL }}/{{ article.url }}" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h2>
+                        </header>
+                        {% include 'article-footer.html' %}
+                        {{ article.summary }}
+                    </article><!-- /.entry -->
+                </li>
 
-        {% endfor %}
-      </ol>
-      {% include 'pagination.html' %}
+                {% endfor %}
+            </ol><!-- /#article-list -->
+{% include 'pagination.html' %}
 {% endblock content %}

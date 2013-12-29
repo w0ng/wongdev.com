@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="/css/normalize.css" type="text/css">
     <link rel="stylesheet" href="/css/main.css" type="text/css">
     <link rel="stylesheet" href="/css/pygment.css" type="text/css">
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic|Inconsolata:400" type="text/css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Merriweather:400,400italic,700,700italic|Lato:400,700|Inconsolata:400" type="text/css">
     {% if FEED_ALL_ATOM %}
     <link rel="alternate" href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" title="{{ SITENAME }} Full Atom Feed" type="application/atom+xml">
     {% endif %}
@@ -17,49 +17,49 @@
 </head>
 
 <body>
-    <div id="wrap">        
-        <!--[if lt IE 8]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-        <header id="masthead" class="center">
-            <h1><a href="{{ SITEURL }}" id="logo" class="heading-link">{{ SITENAME }}{% if SITESUBTITLE %} <strong>{{ SITESUBTITLE }}</strong>{% endif %}</a></h1>
+    <!--[if lt IE 8]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <header id="masthead">
+        <div class="wrap">
             <nav>
-                <ul class="inline-block">
-                    <li class="inline-block menu-item">:: <a href="{{ SITEURL }}/{{ ARCHIVES_URL }}" class="heading-link{%if active_menu == 'Archives' %} active{% endif %}">Archives</a></li>
-                    {% if categories|length > 1 %}
-                    <li class="inline-block menu-item">:: <a href="{{ SITEURL }}/{{ CATEGORIES_URL }}" class="heading-link{%if active_menu == 'Categories' %} active{% endif %}">Categories</a></li>
+                <ul id="menu">
+                    <li class="ib"><a id="site-title" class="menu-link{%if not active_menu and not page %} active{% endif %}" href="{{ SITEURL }}/">{{ SITENAME }}</a></li>
+                    {% if ARCHIVES_URL %}
+                    <li class="ib"><a class="menu-link{%if active_menu == 'archives' %} active{% endif %}" href="{{ SITEURL }}/{{ ARCHIVES_URL }}">Archives</a></li>
                     {% endif %}
-                    {% if tags|length > 1 %}
-                    <li class="inline-block menu-item">:: <a href="{{ SITEURL }}/{{ TAGS_URL }}" class="heading-link{%if active_menu == 'Tags' %} active{% endif %}">Tags</a></li>
+                    {% if CATEGORIES_URL %}
+                    <li class="ib"><a class="menu-link{%if active_menu == 'categories' %} active{% endif %}" href="{{ SITEURL }}/{{ CATEGORIES_URL }}">Categories</a></li>
                     {% endif %}
-                    {% for title, link in MENUITEMS %}
-                    <li class="inline-block menu-item">:: <a href="{{ link }}">{{ title }}</a></li>
-                    {% endfor %}
+                    {% if TAGS_URL %}
+                    <li class="ib"><a class="menu-link{%if active_menu == 'tags' %} active{% endif %}" href="{{ SITEURL }}/{{ TAGS_URL }}">Tags</a></li>
+                    {% endif %}
                     {% if DISPLAY_PAGES_ON_MENU %}
                     {% for p in PAGES %}
-                    <li class="inline-block menu-item">:: <a href="{{ SITEURL }}/{{ p.url }}" class="heading-link{% if p == page %} active{% endif %}">{{ p.title }}</a>{% if loop.last %} ::{% endif %}</li>
-                    {% endfor %}
-                    {% else %}
-                    {% if DISPLAY_CATEGORIES_ON_MENU %}
-                    {% for cat, null in categories %}
-                    <li class="inline-block menu-item">:: <a href="{{ SITEURL }}/{{ cat.url }}" class="heading-link{% if cat == category %} active{% endif %}">{{ cat }}</a></li>
+                    <li class="ib"><a class="menu-link{% if p == page %} active{% endif %}" href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
                     {% endfor %}
                     {% endif %}
-                    {% endif %}
-                </ul>
+                    {% for title, link in MENUITEMS %}
+                    <li class="ib"><a class="menu-link" href="{{ link }}">{{ title }}</a></li>
+                    {% endfor %}
+                </ul><!-- /#menu -->
             </nav>
-        </header><!-- /#masthead -->
+        </div><!-- /.wrap -->
+    </header><!-- /#masthead -->
 
-        <section id="content">
-            {% block content %}
-            {% endblock %}
-        </section><!-- /#content -->
+    <section id="content">
+        <div class="wrap">
+        {% block content %}
+        {% endblock %}
+        </div><!-- /.wrap -->
+    </section><!-- /#content -->
 
-        <footer id="content-footer" class="center">
+    <footer id="base-footer">
+        <div class="wrap">
             <p class="info">&copy; wongdev.com 2013. Powered by <a href="http://getpelican.com/">Pelican</a>.</p>
-            <address class="info">Fork me on <a href="https://github.com/w0ng/wongdev.com">GitHub</a>.</address>
-        </footer><!-- /#content-footer -->
-    </div><!-- /#wrap -->
+        </div><!-- /.wrap -->
+    </footer><!-- /#pg-footer -->
+
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
     <script src="/js/plugins.js"></script>

@@ -98,6 +98,26 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+/*
+ * Contents:
+ *
+ * 1. General
+ * 2. Base layout (base)
+ *      2.1. Base header (base)
+ *      2.2. Base content (base)
+ *      2.3. Base footer (base)
+ * 3. Article summaries (index)
+ *      3.1. Article info (article-footer)
+ *      3.2. Next/prev pages (pagination)
+ * 4. Helpers
+ */
+
+
+/* ===========
+ * 1. General
+ * ===========
+ */
+
 html,
 button,
 input,
@@ -107,63 +127,42 @@ textarea {
 }
 
 html {
-    background: #fff;
-    font-family: 'Open Sans', sans-serif;
+    background: #eee;
+    font-family: 'Merriweather', serif;
     font-size: 1.125em;
-    line-height: 1.6;
-}
-
-body {
-    margin: 20px;
-}
-
-#wrap {
-    margin: 0 auto;
-    max-width: 40em;
+    line-height: 1.8;
 }
 
 h1,
 h2,
-h3 {
-    font-weight: normal;
-    margin: 1em 0 0.5em;
-}
-
-h1 {
-    font-size: 2.5em;
-}
-
-h2 {
-    font-size: 2em;
-}
-
-h3 {
-    font-size: 1.5em;
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Lato', sans-serif;
+    margin: 1.5em 0 0;
 }
 
 a {
-  color: #36B;
+  color: #348;
 }
 
 a:hover {
-  color: #07B;
+  color: #48b;
   text-decoration: none;
-}
-
-strong {
-    color: #555;
 }
 
 code,
 kbd,
 pre,
 samp {
-    background-color: #f8f8f8;
-    border: 1px solid #ddd;
+    background-color: #fff;
     font-family: 'Inconsolata', monospace, serif;
 }
 
 pre {
+    border: 1px solid #ddd;
+    font-size: 0.9em;
     line-height: 1.2em;
     overflow: auto;
     padding: 10px;
@@ -171,7 +170,8 @@ pre {
 }
 
 code {
-    padding: 2px;
+    border: 1px solid #eee;
+    padding: 3px;
 }
 
 blockquote {
@@ -183,88 +183,185 @@ blockquote {
 
 td,
 th {
+    background: #fff;
     border: 1px solid #ddd;
     padding: 5px 10px;
 }
 
-#masthead {
-  border-bottom: 10px solid #eee;
+address {
+    font-style: normal;
 }
 
-.center {
-  text-align: center;
+.wrap {
+    margin: 0 auto;
+    max-width: 40em;
+    padding: 0 20px;
 }
 
-#logo {
-  font-size: 2em;
-}
+/* =====================
+ * 2. Base layout (base)
+ * =====================
+ */
 
-.heading-link {
-  color: #333;
-  text-decoration: none;
-}
+    /* ====================
+     * 2.1. Masthead (base)
+     * ====================
+     */
 
-.heading-link:hover {
-  color: #07B;
-  border-bottom: 5px solid #07B;
-}
+    #masthead {
+        background: #2e384d;
+    }
 
-.inline-block {
-  display: inline-block;
-  margin: 0;
-  padding: 0;
-}
+    #menu {
+        font-family: 'Lato', sans-serif;
+        line-height: 2.5em;
+        margin: 0;
+        padding: 0;
+    }
 
-.menu-item {
-  font-size: .9em;
-  letter-spacing: 4px;
-}
+    #site-title {
+        color: #fff;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
 
-.active {
-  border-bottom: 5px solid #333;
-}
+    .menu-link {
+        color: #99a5bf;
+        padding: 0.6em;
+        text-decoration: none;
+    }
 
-.no-marker {
-  list-style-type: none;
+    .menu-link:hover {
+        background: #354159;
+    }
+
+    .active {
+        background: #3d4a66;
+        color: #ddd;
+    }
+
+    /* ========================
+     * 2.2. Base content (base)
+     * ========================
+     */
+
+    #content {
+        background: #f8f8f8;
+        padding-bottom: 1em;
+    }
+
+    /* =======================
+     * 2.3. Base footer (base)
+     * =======================
+     */
+
+    #base-footer {
+        border-top: 1px solid #ddd;
+        color: #666;
+        padding: 2em 0 1em;
+        text-align: center;
+    }
+
+/* =========================
+ * 3. Blog summaries (index)
+ * =========================
+ */
+
+.count {
+    color: #999;
 }
 
 .entry {
-  border-bottom: 2px dotted #ccc;
+    border-bottom: 2px dotted #ccc;
+    color: #333;
 }
 
-.first-entry {
-  border-top: 0;
-  margin-top: 0;
+#top-entry {
+    margin-top: 0;
 }
+
+    /* ====================================
+     * 3.1. Article footer (article-footer)
+     * ====================================
+     */
+
+    /* ==================================
+     * 3.2. Next/prev pages (pagination)
+     * ==================================
+     */
+
+    .prev-next {
+        background: #eee;
+        border: 1px solid #ddd;
+        color: #999;
+        font-family: 'Lato', sans-serif;
+        font-size: .8em;
+        padding: 2px 10px;
+        text-decoration: none;
+    }
+
+    .btn-on {
+        background: #eee;
+        color: #348;
+    }
+
+    .btn-on:hover {
+          border: 1px solid #48b;
+    }
+
+/* ==========
+ * 4. Helpers
+ * ==========
+ */
+
+/*
+ * Replace content's first h1 margin-top with padding-top
+ */
+
+.content-title {
+    margin-top: 0;
+    padding-top: 1.5em;
+}
+
+/*
+ * Display block objects as inline-block objects
+ */
+
+.ib {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Display footer info in a smaller font
+ */
 
 .info {
-  border: 0;
-  font-size: .8em;
-  margin: 0;
-  padding: 0;
+    font-family: 'Lato', sans-serif;
+    font-size: .8em;
+    margin: 0;
+    padding: 0;
 }
 
-.item-info {
-  color: #999;
-  float: left;
-  padding-right: 1em;
-  text-align: right;
+/*
+ * Don't indent and don't display bullets or numbers for list
+ */
+
+.link-list {
+    list-style-type: none;
+    padding: 0;
 }
 
-.archive-term {
-  width: 8em;
-}
+/*
+ * Info for a linked list of {authors,articles,categories,tags}
+ */
 
-.entry-count {
-  width: 6em;
-}
-
-.invisible {
-  visibility: hidden;
-}
-
-#content-footer {
-  margin: 60px 0;
+.link-list-info {
+    color: #999;
+    min-width: 8em;
+    margin-right: 1em;
+    text-align: right;
 }
 
 /* ==========================================================================

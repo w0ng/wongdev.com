@@ -1,12 +1,14 @@
 {% extends "base.html" %}
+{% set active_menu = 'tags' %}
 {% block title %}{{ SITENAME }} - Tags{% endblock %}
-{% set active_menu = 'Tags' %}
 {% block content %}
-      <h1>Tags</h1>
-      <ul class="no-marker">
-      {% for tag, articles in tags|sort %}
-        <li class="entry-count item-info">{{ articles|count }} article{% if articles|count != 1 %}s{% endif %}</li>
-        <li><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a></li>
-      {% endfor %}
-      </ul>
+            <h1 class="content-title">Tags</h1>
+            <ul class="link-list">
+            {% for tag, articles in tags|sort %}
+                <li>
+                    <p class="ib link-list-info">{{ articles|count }} article{% if articles|count != 1 %}s{% endif %}</p>
+                    <p class="ib"><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a></p>
+                </li>
+            {% endfor %}
+            </ul><!-- /.link-list -->
 {% endblock %}

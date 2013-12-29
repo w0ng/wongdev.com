@@ -1,12 +1,14 @@
 {% extends "base.html" %}
+{% set active_menu = 'categories' %}
 {% block title %}{{ SITENAME }} - Categories{% endblock title %}
-{% set active_menu = 'Categories' %}
 {% block content %}
-      <h1>Categories</h1>
-      <ul class="no-marker">
-      {% for category, articles in categories|sort %}
-        <li class="entry-count item-info">{{ articles|count }} article{% if articles|count != 1 %}s{% endif %}</li>
-        <li><a href="{{ SITEURL }}/{{ category.url }}">{{ category }}</a></li>
-      {% endfor %}
-      </ul>
+            <h1 class="content-title">Categories</h1>
+            <ul class="link-list">
+            {% for category, articles in categories|sort %}
+                <li>
+                    <p class="ib link-list-info">{{ articles|count }} article{% if articles|count != 1 %}s{% endif %}</p>
+                    <p class="ib"><a href="{{ SITEURL }}/{{ category.url }}">{{ category }}</a></p>
+                </li>
+            {% endfor %}
+            </ul><!-- /.link-list -->
 {% endblock %}

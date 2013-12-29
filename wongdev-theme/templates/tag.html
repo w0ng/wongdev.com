@@ -1,4 +1,4 @@
 {% extends "index.html" %}
-{% block title %}{{ SITENAME }} - Tags: {{ tag }}{% endblock title %}
-{% set active_menu = 'Tags' %}
-{% block content_title %}<a class="heading-link" href="{{ SITEURL }}/{{ TAGS_URL }}">Tags</a>: {{ tag }}{% endblock %}
+{% set active_menu = 'tags' %}
+{% block title %}{{ SITENAME }} - {% if TAGS_URL %}Tags: {% endif %}{{ tag }}{% endblock title %}
+{% block content_title %}{% if TAGS_URL %}<a href="{{ SITEURL }}/{{ TAGS_URL }}">Tags</a> &gt; {% endif %}{{ tag }}{% endblock %}

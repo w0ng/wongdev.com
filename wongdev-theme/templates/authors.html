@@ -1,11 +1,14 @@
 {% extends "base.html" %}
+{% set active_menu = 'authors' %}
 {% block title %}{{ SITENAME }} - Authors{% endblock %}
 {% block content %}
-      <h1>Authors</h1>
-      <ul class="no-marker">
-        {% for author, articles in authors|sort %}
-        <li class="entry-count item-info">{{ articles|count }} article{% if articles|count != 1 %}s{% endif %}</li>
-        <li><a href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a></li>
-        {% endfor %}
-      </ul>
+            <h1 class="content-title">Authors</h1>
+            <ul class="link-list">
+            {% for author, articles in authors|sort %}
+                <li>
+                    <p class="ib link-list-info">{{ articles|count }} article{% if articles|count != 1 %}s{% endif %}</p>
+                    <p class="ib"><a href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a></p>
+                </li>
+            {% endfor %}
+            </ul><!-- /.link-list -->
 {% endblock %}

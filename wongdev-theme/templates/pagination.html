@@ -1,16 +1,19 @@
 {% if DEFAULT_PAGINATION %}
-      <p class="center">
-        Page<br>
-        {% if articles_page.has_previous() %}
-        <a href="{{ SITEURL }}/{{ articles_previous_page.url }}">&laquo; Prev</a>
-        {% else %}
-        <span class="invisible">&laquo; Prev</span>
-        {% endif %}
-        {{ articles_page.number }} of {{ articles_paginator.num_pages }}
-        {% if articles_page.has_next() %}
-        <a href="{{ SITEURL }}/{{ articles_next_page.url }}">Next &raquo;</a>
-        {% else %}
-        <span class="invisible">Next &raquo;</span>
-        {% endif %}
-      </p>
+            <nav id="paginator">
+                <p class="ib">
+                    {% if articles_page.has_previous() %}
+                    <a class="prev-next btn-on" href="{{ SITEURL }}/{{ articles_previous_page.url }}">&lt; Prev</a>
+                    {% else %}
+                    <span class="prev-next">&lt; Prev</span>
+                    {% endif %}
+                </p>
+                <p class="ib">
+                    {% if articles_page.has_next() %}
+                    <a class="prev-next btn-on" href="{{ SITEURL }}/{{ articles_next_page.url }}">Next &gt;</a>
+                    {% else %}
+                    <span class="prev-next">Next &gt;</span>
+                    {% endif %}
+                </p>
+                <p>Page {{ articles_page.number }} of {{ articles_paginator.num_pages }}</p>
+            </nav><!-- /#paginator -->
 {% endif %}
