@@ -106,12 +106,12 @@ Here's an example.
 On startup, the first tag is automatically selected. I hit `MODKEY + 2` and
 `MODKEY + 5` to toggle windows from tags 2 and 5 into view:
 
-[![dwmshot1](http://www.wongdev.com/images/dwmshot1-small.png)](http://www.wongdev.com/images/dwmshot1.png)
+[![dwmshot1](/img/dwmshot1-small.png)](/img/dwmshot1.png)
 
 Then I created a new view with `MODKEY + Ctrl + 3` and toggled windows
 from tag 4 into it with `MODKEY + 4`:
 
-[![dwmshot2](http://www.wongdev.com/images/dwmshot2-small.png)](http://www.wongdev.com/images/dwmshot2.png)
+[![dwmshot2](/img/dwmshot2-small.png)](/img/dwmshot2.png)
 
 `MODKEY + Tab` will now toggle between the first and second screenshots.
 
@@ -120,7 +120,7 @@ and re-arranged the windows such that the `config.h` file became the master
 client, appearing on the left, and the `.markdown` file became the last
 client, appearing on the bottom-right.
 
-[![dwmshot3](http://www.wongdev.com/images/dwmshot3-small.png)](http://www.wongdev.com/images/dwmshot3.png)
+[![dwmshot3](/img/dwmshot3-small.png)](/img/dwmshot3.png)
 
 Toggling tag 3's windows out of the view again with `MODKEY + 3` brought me
 back to the first screenshot. Then `MODKEY + Tab` got me back to the second
@@ -129,9 +129,9 @@ screenshot.
 From the second screenshot, I toggled windows from tag 1 or 2 into view. Notice
 that the positioning of the windows is remembered from the third screenshot.
 
-[![dwmshot4](http://www.wongdev.com/images/dwmshot4-small.png)](http://www.wongdev.com/images/dwmshot4.png)
+[![dwmshot4](/img/dwmshot4-small.png)](/img/dwmshot4.png)
 
-[![dwmshot5](http://www.wongdev.com/images/dwmshot5-small.png)](http://www.wongdev.com/images/dwmshot5.png)
+[![dwmshot5](/img/dwmshot5-small.png)](/img/dwmshot5.png)
 
 As you'd expect, if I'd toggled windows from both tags 1 and 2 into view, it'd
 be identical to the third screenshot.
@@ -146,25 +146,25 @@ current view.
 For those who are still a bit confused, here's some examples to describe the
 information displayed in dwm's bar.
 
-![dwmbar1](http://www.wongdev.com/images/dwmbar1.png)
+![dwmbar1](/img/dwmbar1.png)
 
 *   A view displaying windows labelled tag 1.
 *   A tag 1 window has focus.
 
-![dwmbar2](http://www.wongdev.com/images/dwmbar2.png)
+![dwmbar2](/img/dwmbar2.png)
 
 *   A view displaying windows labelled tags 1 and 5. 
 *   A tag 1 window has focus.
 *   One or more tag 5 windows are visible but not focussed.
 
 
-![dwmbar3](http://www.wongdev.com/images/dwmbar3.png)
+![dwmbar3](/img/dwmbar3.png)
 
 *   A view displaying windows labelled tags 1, 2 and 5.
 *   A window that is assigned to both tags 1 and 2 has focus.
 *   One or more tag 5 windows are visible but not focussed.
 
-![dwmbar4](http://www.wongdev.com/images/dwmbar4.png)
+![dwmbar4](/img/dwmbar4.png)
 
 *   A view displaying windows assigned to tag 3 and tag 4.
 *   There are no visible windows.

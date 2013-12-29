@@ -10,34 +10,49 @@ SITESUBTITLE = ''
 SITEURL = ''
 TIMEZONE = 'Australia/Sydney'
 
-ARCHIVES_SAVE_AS = 'archives/index.html'
-ARCHIVES_URL = 'archives/'
+ARCHIVES_SAVE_AS = 'blog/archives/index.html'
+ARCHIVES_URL = 'blog/archives/'
 ARTICLE_LANG_SAVE_AS = 'blog/{slug}-{lang}/index.html'
 ARTICLE_LANG_URL = 'blog/{slug}-{lang}/'
 ARTICLE_SAVE_AS = 'blog/{slug}/index.html'
 ARTICLE_URL = 'blog/{slug}/'
-AUTHORS_SAVE_AS = 'authors/index.html'
-AUTHORS_URL = 'authors/'
-AUTHOR_SAVE_AS = 'author/{slug}/index.html'
-AUTHOR_URL = 'author/{slug}/'
-CATEGORIES_SAVE_AS = 'categories/index.html'
-CATEGORIES_URL = 'categories/'
-CATEGORY_SAVE_AS = 'category/{slug}/index.html'
-CATEGORY_URL = 'category/{slug}/'
-PAGE_LANG_SAVE_AS = 'pages/{slug}-{lang}/index.html'
-PAGE_LANG_URL = 'pages/{slug}-{lang}/'
-PAGE_SAVE_AS = 'pages/{slug}/index.html'
-PAGE_URL = 'pages/{slug}/'
-TAGS_SAVE_AS = 'tags/index.html'
-TAGS_URL = 'tags/'
-TAG_SAVE_AS = 'tag/{slug}/index.html'
-TAG_URL = 'tag/{slug}/'
+AUTHORS_SAVE_AS = 'blog/authors/index.html'
+AUTHORS_URL = 'blog/authorss/'
+AUTHOR_SAVE_AS = 'blog/authors/{slug}/index.html'
+AUTHOR_URL = 'blog/authors/{slug}/'
+CATEGORIES_SAVE_AS = 'blog/categories/index.html'
+CATEGORIES_URL = 'blog/categories/'
+CATEGORY_SAVE_AS = 'blog/categories/{slug}/index.html'
+CATEGORY_URL = 'blog/categories/{slug}/'
+TAGS_SAVE_AS = 'blog/tags/index.html'
+TAGS_URL = 'blog/tags/'
+TAG_SAVE_AS = 'blog/tags/{slug}/index.html'
+TAG_URL = 'blog/tags/{slug}/'
+
+PAGE_LANG_SAVE_AS = '{slug}-{lang}/index.html'
+PAGE_LANG_URL = '{slug}-{lang}/'
+PAGE_SAVE_AS = '{slug}/index.html'
+PAGE_URL = '{slug}/'
 
 DEFAULT_PAGINATION = 5
-
 PAGINATION_PATTERNS = (
     (1, '{base_name}/', '{base_name}/index.html'),
     (2, '{base_name}/page/{number}/', '{base_name}/page/{number}/index.html'),
 )
 
 THEME = '/home/w0ng/www/blog/wongdev-theme'
+THEME_STATIC_DIR = ''
+
+STATIC_PATHS = [
+    'img',
+    'extra/.htaccess',
+    'extra/crossdomain.xml',
+    'extra/humans.txt',
+    'extra/robots.txt',
+    ]
+EXTRA_PATH_METADATA = {
+    'extra/.htaccess': {'path': '.htaccess'},
+    'extra/crossdomain.xml': {'path': 'crossdomain.xml'},
+    'extra/humans.txt': {'path': 'humans.txt'},
+    'extra/robots.txt': {'path': 'robots.txt'},
+    }

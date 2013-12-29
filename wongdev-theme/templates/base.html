@@ -1,66 +1,69 @@
 <!DOCTYPE html>
-<html lang="{{ DEFAULT_LANG }}">
-<head>
-  <meta charset="utf-8">
-  {% block head %}
-  {% endblock %}
-  <title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
-  <link rel="stylesheet" href="{{ SITEURL }}/theme/css/{{ CSS_FILE }}">
-  <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic|Inconsolata:400" rel="stylesheet" type="text/css">
-  {% if FEED_ALL_ATOM %}
-  <link rel="alternate" type="application/atom+xml" href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" title="{{ SITENAME }} Full Atom Feed">
-  {% endif %}
-  {% if FEED_ALL_RSS %}
-  <link rel="alternate" type="application/rss+xml" href="{{ FEED_DOMAIN }}/{{ FEED_ALL_RSS }}" title="{{ SITENAME }} Full RSS Feed">
-  {% endif %}
-  <!--[if IE lt IE 9]>
-  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-  <![endif]-->
-  {% include 'analytics.html' %}
+<html class="no-js" lang="{{ DEFAULT_LANG }}">
+    <head>
+    <meta charset="utf-8">
+    <title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
+    {% block head %}
+    {% endblock %}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/normalize.css" type="text/css">
+    <link rel="stylesheet" href="/css/main.css" type="text/css">
+    <link rel="stylesheet" href="/css/pygment.css" type="text/css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic|Inconsolata:400" type="text/css">
+    {% if FEED_ALL_ATOM %}
+    <link rel="alternate" href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" title="{{ SITENAME }} Full Atom Feed" type="application/atom+xml">
+    {% endif %}
+    <script src="/js/vendor/modernizr-2.7.1.min.js"></script>
 </head>
 
 <body>
-  <div id="wrap">
+    <div id="wrap">        
+        <!--[if lt IE 8]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <header id="masthead" class="center">
+            <h1><a href="{{ SITEURL }}" id="logo" class="heading-link">{{ SITENAME }}{% if SITESUBTITLE %} <strong>{{ SITESUBTITLE }}</strong>{% endif %}</a></h1>
+            <nav>
+                <ul class="inline-block">
+                    <li class="inline-block menu-item">:: <a href="{{ SITEURL }}/{{ ARCHIVES_URL }}" class="heading-link{%if active_menu == 'Archives' %} active{% endif %}">Archives</a></li>
+                    {% if categories|length > 1 %}
+                    <li class="inline-block menu-item">:: <a href="{{ SITEURL }}/{{ CATEGORIES_URL }}" class="heading-link{%if active_menu == 'Categories' %} active{% endif %}">Categories</a></li>
+                    {% endif %}
+                    {% if tags|length > 1 %}
+                    <li class="inline-block menu-item">:: <a href="{{ SITEURL }}/{{ TAGS_URL }}" class="heading-link{%if active_menu == 'Tags' %} active{% endif %}">Tags</a></li>
+                    {% endif %}
+                    {% for title, link in MENUITEMS %}
+                    <li class="inline-block menu-item">:: <a href="{{ link }}">{{ title }}</a></li>
+                    {% endfor %}
+                    {% if DISPLAY_PAGES_ON_MENU %}
+                    {% for p in PAGES %}
+                    <li class="inline-block menu-item">:: <a href="{{ SITEURL }}/{{ p.url }}" class="heading-link{% if p == page %} active{% endif %}">{{ p.title }}</a>{% if loop.last %} ::{% endif %}</li>
+                    {% endfor %}
+                    {% else %}
+                    {% if DISPLAY_CATEGORIES_ON_MENU %}
+                    {% for cat, null in categories %}
+                    <li class="inline-block menu-item">:: <a href="{{ SITEURL }}/{{ cat.url }}" class="heading-link{% if cat == category %} active{% endif %}">{{ cat }}</a></li>
+                    {% endfor %}
+                    {% endif %}
+                    {% endif %}
+                </ul>
+            </nav>
+        </header><!-- /#masthead -->
 
-    <header id="masthead" class="center">
-      <h1><a href="{{ SITEURL }}" id="logo" class="heading-link">{{ SITENAME }}{% if SITESUBTITLE %} <strong>{{ SITESUBTITLE }}</strong>{% endif %}</a></h1>
-      <nav>
-        <ul class="inline-block">
-          <li class="inline-block menu-item">:: <a href="{{ SITEURL }}/{{ ARCHIVES_URL }}" class="heading-link{%if active_menu == 'Archives' %} active{% endif %}">Archives</a></li>
-          {% if categories|length > 1 %}
-          <li class="inline-block menu-item">:: <a href="{{ SITEURL }}/{{ CATEGORIES_URL }}" class="heading-link{%if active_menu == 'Categories' %} active{% endif %}">Categories</a></li>
-          {% endif %}
-          {% if tags|length > 1 %}
-          <li class="inline-block menu-item">:: <a href="{{ SITEURL }}/{{ TAGS_URL }}" class="heading-link{%if active_menu == 'Tags' %} active{% endif %}">Tags</a></li>
-          {% endif %}
-          {% for title, link in MENUITEMS %}
-          <li class="inline-block menu-item">:: <a href="{{ link }}">{{ title }}</a></li>
-          {% endfor %}
-          {% if DISPLAY_PAGES_ON_MENU %}
-          {% for p in PAGES %}
-          <li class="inline-block menu-item">:: <a href="{{ SITEURL }}/{{ p.url }}" class="heading-link{% if p == page %} active{% endif %}">{{ p.title }}</a>{% if loop.last %} ::{% endif %}</li>
-          {% endfor %}
-          {% else %}
-          {% if DISPLAY_CATEGORIES_ON_MENU %}
-          {% for cat, null in categories %}
-          <li class="inline-block menu-item">:: <a href="{{ SITEURL }}/{{ cat.url }}" class="heading-link{% if cat == category %} active{% endif %}">{{ cat }}</a></li>
-          {% endfor %}
-          {% endif %}
-          {% endif %}
-        </ul>
-      </nav>
-    </header><!-- /#masthead -->
+        <section id="content">
+            {% block content %}
+            {% endblock %}
+        </section><!-- /#content -->
 
-    <section id="content">
-    {% block content %}
-    {% endblock %}
-    </section><!-- /#content -->
-
-    <footer id="content-footer" class="center">
-      <p class="info">&copy; wongdev.com 2013. Powered by <a href="http://getpelican.com/">Pelican</a>.</p>
-      <address class="info">Fork me on <a href="https://github.com/w0ng/wongdev.com">GitHub</a>.</address>
-    </footer><!-- /#content-footer -->
-
-  </div><!-- /#wrap -->
+        <footer id="content-footer" class="center">
+            <p class="info">&copy; wongdev.com 2013. Powered by <a href="http://getpelican.com/">Pelican</a>.</p>
+            <address class="info">Fork me on <a href="https://github.com/w0ng/wongdev.com">GitHub</a>.</address>
+        </footer><!-- /#content-footer -->
+    </div><!-- /#wrap -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+    <script src="/js/plugins.js"></script>
+    <script src="/js/main.js"></script>
+    {% include 'analytics.html' %}
 </body>
 </html>

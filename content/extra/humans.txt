@@ -1,0 +1,14 @@
+/* TEAM */
+
+    Owner: Andrew Wong (w0ng)
+    Email: andrew [at] wongdev.com
+    Location: Sydney, Australia
+
+/* THANKS */
+
+/* SITE */
+
+    Last update: 2013-12-29 11:13
+    Standards: HTML5, CSS3
+    Components: Normalize.css, jQuery, Modernizr
+    Software: Vim
