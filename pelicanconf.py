@@ -56,3 +56,7 @@ EXTRA_PATH_METADATA = {
     'extra/humans.txt': {'path': 'humans.txt'},
     'extra/robots.txt': {'path': 'robots.txt'},
     }
+
+MENUITEMS = (
+        ('RSS','http://wongdev.com/feeds/all.atom.xml'),
+)
