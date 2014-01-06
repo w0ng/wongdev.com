@@ -7,7 +7,7 @@
                 <li class="count">
                     <article class="entry">
                         <header>
-                            <h2{% if loop.first %} id="top-entry"{% endif %}><a rel="bookmark" href="{{ SITEURL }}/{{ article.url }}" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h2>
+                            <h2{% if loop.first %} class="top-entry"{% endif %}><a rel="bookmark" href="{{ SITEURL }}/{{ article.url }}" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h2>
                         </header>
                         {% include 'article-footer.html' %}
                         {{ article.summary }}

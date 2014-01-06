@@ -6,6 +6,12 @@
  * Kroc Camen, and the H5BP dev community and team.
  */
 
+/*
+ * Use @import for YUI compressor css minifier on publish
+ */
+@import url('normalize.css');
+@import url('pygment.css');
+
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
@@ -208,21 +214,15 @@ address {
      * ====================
      */
 
-    #masthead {
+    .masthead {
         background: #2e384d;
     }
 
-    #menu {
+    .menu {
         font-family: 'Lato', sans-serif;
         line-height: 2.5em;
         margin: 0;
         padding: 0;
-    }
-
-    #site-title {
-        color: #fff;
-        font-weight: bold;
-        text-transform: uppercase;
     }
 
     .menu-link {
@@ -240,12 +240,18 @@ address {
         color: #ddd;
     }
 
+    .site-title {
+        color: #fff;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
     /* ========================
      * 2.2. Base content (base)
      * ========================
      */
 
-    #content {
+    .content {
         background: #f8f8f8;
         padding-bottom: 1em;
     }
@@ -255,7 +261,7 @@ address {
      * =======================
      */
 
-    #base-footer {
+    .base-footer {
         border-top: 1px solid #ddd;
         color: #666;
         padding: 2em 0 1em;
@@ -276,12 +282,12 @@ address {
     color: #333;
 }
 
-#top-entry {
+.top-entry {
     margin-top: 0;
 }
 
     /* ====================================
-     * 3.1. Article footer (article-footer)
+     * 3.1. Article info (article-footer)
      * ====================================
      */
 

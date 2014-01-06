@@ -6,10 +6,8 @@
     {% block head %}
     {% endblock %}
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/css/normalize.css" type="text/css">
-    <link rel="stylesheet" href="/css/main.css" type="text/css">
-    <link rel="stylesheet" href="/css/pygment.css" type="text/css">
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Merriweather:400,400italic,700,700italic|Lato:400,700|Inconsolata:400" type="text/css">
+    <link rel="stylesheet" href="/css/main.css" type="text/css">
     {% if FEED_ALL_ATOM %}
     <link rel="alternate" href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" title="{{ SITENAME }} Full Atom Feed" type="application/atom+xml">
     {% endif %}
@@ -20,11 +18,11 @@
     <!--[if lt IE 8]>
         <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-    <header id="masthead">
+    <header class="masthead">
         <div class="wrap">
             <nav>
-                <ul id="menu">
-                    <li class="ib"><a id="site-title" class="menu-link{%if not active_menu and not page %} active{% endif %}" href="{{ SITEURL }}/">{{ SITENAME }}</a></li>
+                <ul class="menu">
+                    <li class="ib"><a class="menu-link site-title{%if not active_menu and not page %} active{% endif %}" href="{{ SITEURL }}/">{{ SITENAME }}</a></li>
                     {% if ARCHIVES_URL %}
                     <li class="ib"><a class="menu-link{%if active_menu == 'archives' %} active{% endif %}" href="{{ SITEURL }}/{{ ARCHIVES_URL }}">Archives</a></li>
                     {% endif %}
@@ -42,23 +40,23 @@
                     {% for title, link in MENUITEMS %}
                     <li class="ib"><a class="menu-link" href="{{ link }}">{{ title }}</a></li>
                     {% endfor %}
-                </ul><!-- /#menu -->
+                </ul><!-- /.menu -->
             </nav>
         </div><!-- /.wrap -->
-    </header><!-- /#masthead -->
+    </header><!-- /.masthead -->
 
-    <section id="content">
+    <section class="content">
         <div class="wrap">
         {% block content %}
         {% endblock %}
         </div><!-- /.wrap -->
-    </section><!-- /#content -->
+    </section><!-- /.content -->
 
-    <footer id="base-footer">
+    <footer class="base-footer">
         <div class="wrap">
             <p class="info">&copy; wongdev.com 2013. Powered by <a href="http://getpelican.com/">Pelican</a>.</p>
         </div><!-- /.wrap -->
-    </footer><!-- /#pg-footer -->
+    </footer><!-- /.base-footer -->
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
