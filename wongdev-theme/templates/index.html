@@ -2,7 +2,7 @@
 {% block content %}
 <h1 class="content-title">{% block content_title %}All articles{% endblock %} <span class="count">({{ articles|count }})</span></h1>
 
-            <ol id="article-list"{% if DEFAULT_PAGINATION %} start="{{ ((articles_page.number - 1) * DEFAULT_PAGINATION) + 1}}"{% endif %}>
+            <ol class="article-list"{% if DEFAULT_PAGINATION %} start="{{ ((articles_page.number - 1) * DEFAULT_PAGINATION) + 1}}"{% endif %}>
                 {% for article in articles_page.object_list %}
                 <li class="count">
                     <article class="entry">
@@ -15,6 +15,6 @@
                 </li>
 
                 {% endfor %}
-            </ol><!-- /#article-list -->
+            </ol><!-- /.article-list -->
 {% include 'pagination.html' %}
 {% endblock content %}
