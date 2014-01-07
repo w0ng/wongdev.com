@@ -215,7 +215,7 @@ address {
      */
 
     .masthead {
-        background: #2e384d;
+        background: #282A2E;
     }
 
     .menu {
@@ -226,17 +226,18 @@ address {
     }
 
     .menu-link {
-        color: #99a5bf;
+        color: #999;
         padding: 0.6em;
         text-decoration: none;
     }
 
     .menu-link:hover {
-        background: #354159;
+        background: #33343B;
+        color: #ddd;
     }
 
     .active {
-        background: #3d4a66;
+        background: #42434D;
         color: #ddd;
     }
 
