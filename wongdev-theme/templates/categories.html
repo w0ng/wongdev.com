@@ -1,8 +1,8 @@
 {% extends "base.html" %}
 {% set active_menu = 'categories' %}
 {% block title %}{{ SITENAME }} - Categories{% endblock title %}
+{% block main_heading %}Categories{% endblock %}
 {% block content %}
-            <h1 class="content-title">Categories</h1>
             <ul class="link-list">
             {% for category, articles in categories|sort %}
                 <li>

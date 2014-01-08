@@ -1,11 +1,11 @@
                         <footer class="article-footer">
-                            <abbr class="info" title="{{ article.date.isoformat() }}">{{ article.locale_date }}</abbr>
+                            <p class="info">Published: <abbr title="{{ article.date.isoformat() }}">{{ article.locale_date }}</abbr></p>
                             <nav>
                                 {% if article.author %}
-                                <address class="info">By <a href="{{ SITEURL }}/{{ article.author.url }}">{{ article.author }}</a></address>
+                                <address class="info">By: <a href="{{ SITEURL }}/{{ article.author.url }}">{{ article.author }}</a></address>
                                 {% endif %}
                                 {% if article.category %}
-                                <p class="ib info"><a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a> |</p>
+                                <p class="ib info">In: <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a> |</p>
                                 {% endif %}
                                 {% if article.tags %}
                                 <ul class="ib info">

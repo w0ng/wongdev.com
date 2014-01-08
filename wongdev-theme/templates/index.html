@@ -1,7 +1,6 @@
 {% extends "base.html" %}
+{% block main_heading %}All articles{% endblock %}
 {% block content %}
-<h1 class="content-title">{% block content_title %}All articles{% endblock %} <span class="count">({{ articles|count }})</span></h1>
-
             <ol class="article-list"{% if DEFAULT_PAGINATION %} start="{{ ((articles_page.number - 1) * DEFAULT_PAGINATION) + 1}}"{% endif %}>
                 {% for article in articles_page.object_list %}
                 <li class="count">
@@ -9,8 +8,8 @@
                         <header>
                             <h2{% if loop.first %} class="top-entry"{% endif %}><a rel="bookmark" href="{{ SITEURL }}/{{ article.url }}" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h2>
                         </header>
-                        {% include 'article-footer.html' %}
                         {{ article.summary }}
+                        {% include 'article-footer.html' %}
                     </article><!-- /.entry -->
                 </li>
 

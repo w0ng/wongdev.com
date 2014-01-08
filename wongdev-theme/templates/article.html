@@ -6,17 +6,18 @@
     <meta name="description" content="{{ article.summary|striptags }}">
 {% endblock %}
 
+{% block main_heading %}{{ article.title }}{% endblock %}
 {% block content %}
     <article class="full-article">
         <header class="article-header">
-            <h1 class="content-title">{{ article.title }}</h1>
             {% import 'translations.html' as translations with context %}
             {{ translations.translations_for(article) }}
         </header><!-- /.article-header -->
-        {% include 'article-footer.html' %}
         <section class="article-content">
+            <p class="article-date"><abbr title="{{ article.date.isoformat() }}">{{ article.locale_date }}</abbr></p>
             {{ article.content }}
         </section><!-- /.article-content -->
+        {% include 'article-footer.html' %}
         {% if DISQUS_SITENAME and SITEURL and article.status != "draft" %}
         <section class="comments">
             <h2>Comments</h2>

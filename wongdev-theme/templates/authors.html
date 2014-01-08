@@ -1,8 +1,8 @@
 {% extends "base.html" %}
 {% set active_menu = 'authors' %}
 {% block title %}{{ SITENAME }} - Authors{% endblock %}
+{% block main_heading %}Authors{% endblock %}
 {% block content %}
-            <h1 class="content-title">Authors</h1>
             <ul class="link-list">
             {% for author, articles in authors|sort %}
                 <li>

@@ -115,7 +115,8 @@ textarea {
  * 3. Article summaries (index)
  *      3.1. Article info (article-footer)
  *      3.2. Next/prev pages (pagination)
- * 4. Helpers
+ * 4. Article content (article)
+ * 5. Helpers
  */
 
 
@@ -214,7 +215,7 @@ address {
      * ====================
      */
 
-    .masthead {
+    .base-header {
         background: #282A2E;
     }
 
@@ -247,6 +248,17 @@ address {
         text-transform: uppercase;
     }
 
+    .main-heading {
+        background: #1D1F21;
+        color: #f8f8f8;
+    }
+
+    .main-heading-txt {
+        margin: 0;
+        padding: 4em 0;
+        text-align: center;
+    }
+
     /* ========================
      * 2.2. Base content (base)
      * ========================
@@ -254,7 +266,7 @@ address {
 
     .content {
         background: #f8f8f8;
-        padding-bottom: 1em;
+        padding: 2em 0;
     }
 
     /* =======================
@@ -279,7 +291,6 @@ address {
 }
 
 .entry {
-    border-bottom: 2px dotted #ccc;
     color: #333;
 }
 
@@ -292,10 +303,19 @@ address {
      * ====================================
      */
 
+    .article-footer {
+        border-bottom: 1px solid #ddd;
+        border-top: 1px solid #ddd;
+    }
+
     /* ==================================
      * 3.2. Next/prev pages (pagination)
      * ==================================
      */
+
+    .paginator {
+        margin-top: 3em;
+    }
 
     .prev-next {
         background: #eee;
@@ -316,18 +336,26 @@ address {
           border: 1px solid #48b;
     }
 
+/* ============================
+ * 4. Article content (article)
+ * ============================
+ */
+
+.article-date {
+    color: #999;
+}
+
 /* ==========
- * 4. Helpers
+ * 5. Helpers
  * ==========
  */
 
 /*
- * Replace content's first h1 margin-top with padding-top
+ * Display main heading link in same colour as non-links
  */
 
-.content-title {
-    margin-top: 0;
-    padding-top: 1.5em;
+.main-heading-link {
+    color: #f8f8f8;
 }
 
 /*
