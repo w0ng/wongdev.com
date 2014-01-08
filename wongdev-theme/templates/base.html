@@ -6,7 +6,7 @@
     {% block head %}
     {% endblock %}
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Merriweather:400,400italic,700,700italic|Lato:400,700|Inconsolata:400" type="text/css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:400,700|Inconsolata:400|Lora:400,400italic,700,700italic" type="text/css">
     <link rel="stylesheet" href="/css/main.css" type="text/css">
     {% if FEED_ALL_ATOM %}
     <link rel="alternate" href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" title="{{ SITENAME }} Full Atom Feed" type="application/atom+xml">
@@ -44,9 +44,11 @@
             </nav>
         </div><!-- /.wrap -->
         <div class="main-heading">
-            <div class="wrap">
-                <h1 class="main-heading-txt">{% block main_heading %}main_heading{% endblock %}</h1>
-            </div><!-- /.wrap -->
+            <div class="wrap mid-wrap">
+                <div class="mid-container">
+                    <h1 class="main-heading-txt">{% block main_heading %}main_heading{% endblock %}</h1>
+                </div><!-- /.mid-container -->
+            </div><!-- /.wrap /.mid-wrap -->
         </div><!-- /.main-heading -->
     </header><!-- /.base-header -->
 
@@ -65,8 +67,10 @@
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+     <!-- //-beg- concat_js -->
     <script src="/js/plugins.js"></script>
     <script src="/js/main.js"></script>
+    <!-- //-end- concat_js -->
     {% include 'analytics.html' %}
 </body>
 </html>
