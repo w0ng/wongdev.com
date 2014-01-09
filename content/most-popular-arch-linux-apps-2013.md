@@ -62,135 +62,135 @@ category in the 2013 survey.
     -   [6.2. BitTorrent clients](#bittorrent-clients)
     -   [6.3. Version control systems](#version-control-systems)
 
-<a name="x-environment"></a>
+<a id="x-environment"></a>
 ## 1. X Environment
 
-<a name="tiling-window-managers"></a>
+<a id="tiling-window-managers"></a>
 ### 1.1. Tiling window managers
 
 <p></p>
 <canvas id="tilingWM" width="700" height="300"></canvas>
-<p class="legend"><center><span class="legend-red">pkgstats</span><span class="legend-green">2012</span><span class="legend-blue">2013</span></center></p>
+<p class="legend"><span class="legend-red">pkgstats</span><span class="legend-green">2012</span><span class="legend-blue">2013</span></p>
 
-<a name="floating-window-managers"></a>
+<a id="floating-window-managers"></a>
 ### 1.2. Floating window managers
 
 <p></p>
 <canvas id="floatingWM" width="700" height="300"></canvas>
-<p class="legend"><center><span class="legend-red">pkgstats</span><span class="legend-green">2012</span><span class="legend-blue">2013</span></center></p>
+<p class="legend"><span class="legend-red">pkgstats</span><span class="legend-green">2012</span><span class="legend-blue">2013</span></p>
 
-<a name="desktop-environments"></a>
+<a id="desktop-environments"></a>
 ### 1.3. Desktop environments
 
 <p></p>
 <canvas id="desktopEnv" width="700" height="300"></canvas>
-<p class="legend"><center><span class="legend-red">pkgstats</span><span class="legend-green">2012</span><span class="legend-blue">2013</span></center></p>
+<p class="legend"><span class="legend-red">pkgstats</span><span class="legend-green">2012</span><span class="legend-blue">2013</span></p>
 
-<a name="display-managers"></a>
+<a id="display-managers"></a>
 ### 1.4. Display managers
 
 <p></p>
 <canvas id="displayMgr" width="700" height="300"></canvas>
-<p class="legend"><center><span class="legend-red">pkgstats</span><span class="legend-green">2012</span><span class="legend-blue">2013</span></center></p>
+<p class="legend"><span class="legend-red">pkgstats</span><span class="legend-green">2012</span><span class="legend-blue">2013</span></p>
 
-<a name="system-utilities"></a>
+<a id="system-utilities"></a>
 ## 2. System utilities
 
-<a name="command-shells"></a>
+<a id="command-shells"></a>
 ### 2.1. Command shells
 
 <p></p>
 <canvas id="shell" width="700" height="300"></canvas>
-<p class="legend"><center><span class="legend-red">pkgstats</span><span class="legend-green">2012</span><span class="legend-blue">2013</span></center></p>
+<p class="legend"><span class="legend-red">pkgstats</span><span class="legend-green">2012</span><span class="legend-blue">2013</span></p>
 
-<a name="terminal-emulators"></a>
+<a id="terminal-emulators"></a>
 ### 2.2. Terminal emulators
 
 <p></p>
 <canvas id="term" width="700" height="300"></canvas>
-<p class="legend"><center><span class="legend-red">pkgstats</span><span class="legend-green">2012</span><span class="legend-blue">2013</span></center></p>
+<p class="legend"><span class="legend-red">pkgstats</span><span class="legend-green">2012</span><span class="legend-blue">2013</span></p>
 
 -   Honourable mentions: `guake`, `lxterminal`, `termite`, `xterm`, `yakuake`.
 
-<a name="file-managers"></a>
+<a id="file-managers"></a>
 ### 2.3 File managers
 
 <p></p>
 <canvas id="fileMgr" width="700" height="300"></canvas>
-<p class="legend"><center><span class="legend-red">pkgstats</span><span class="legend-green">2012</span><span class="legend-blue">2013</span></center></p>
+<p class="legend"><span class="legend-red">pkgstats</span><span class="legend-green">2012</span><span class="legend-blue">2013</span></p>
 
 -   Honourable mentions: `mc`, `nemo`, `spacefm`.
 
-<a name="network-managers"></a>
+<a id="network-managers"></a>
 ### 2.4. Network managers
 
 <p></p>
 <canvas id="netMgr" width="700" height="300"></canvas>
-<p class="legend"><center><span class="legend-red">pkgstats</span><span class="legend-green">2012</span><span class="legend-blue">2013</span></center></p>
+<p class="legend"><span class="legend-red">pkgstats</span><span class="legend-green">2012</span><span class="legend-blue">2013</span></p>
 
 -   `netcfg` was deprecated and replaced by `netctl` in 2013.
 
-<a name="pacman-helpers"></a>
+<a id="pacman-helpers"></a>
 ### 2.5. Pacman helpers
 
 <p></p>
 <canvas id="pacman" width="700" height="300"></canvas>
-<p class="legend"><center><span class="legend-red">pkgstats</span><span class="legend-green">2012</span><span class="legend-blue">2013</span></center></p>
+<p class="legend"><span class="legend-red">pkgstats</span><span class="legend-green">2012</span><span class="legend-blue">2013</span></p>
 
-<a name="aur-helpers"></a>
+<a id="aur-helpers"></a>
 ### 2.6. AUR helpers
 
 <p></p>
 <canvas id="aur" width="700" height="300"></canvas>
-<p class="legend"><center><span class="legend-red">pkgstats</span><span class="legend-green">2012</span><span class="legend-blue">2013</span></center></p>
+<p class="legend"><span class="legend-red">pkgstats</span><span class="legend-green">2012</span><span class="legend-blue">2013</span></p>
 
-<a name="archivers"></a>
+<a id="archivers"></a>
 ### 2.7. Archivers
 
 <p></p>
 <canvas id="archive" width="700" height="300"></canvas>
-<p class="legend"><center><span class="legend-red">pkgstats</span><span class="legend-green">2012</span><span class="legend-blue">2013</span></center></p>
+<p class="legend"><span class="legend-red">pkgstats</span><span class="legend-green">2012</span><span class="legend-blue">2013</span></p>
 
 -   Honourable mentions: `atool`, `xarchiver`.
 
-<a name="system-monitors"></a>
+<a id="system-monitors"></a>
 ### 2.8. System monitors
 
 <p></p>
 <canvas id="monitor" width="700" height="300"></canvas>
-<p class="legend"><center><span class="legend-red">pkgstats</span><span class="legend-green">2012</span><span class="legend-blue">2013</span></center></p>
+<p class="legend"><span class="legend-red">pkgstats</span><span class="legend-green">2012</span><span class="legend-blue">2013</span></p>
 
 -   Honourable mentions: `gnome-system-monitor`, `ksysguard`, `ntop`.
 
-<a name="multimedia"></a>
+<a id="multimedia"></a>
 ## 3. Multimedia
 
-<a name="image-viewers"></a>
+<a id="image-viewers"></a>
 ### 3.1. Image viewers
 
 <p></p>
 <canvas id="image" width="700" height="300"></canvas>
-<p class="legend"><center><span class="legend-red">pkgstats</span><span class="legend-green">2012</span><span class="legend-blue">2013</span></center></p>
+<p class="legend"><span class="legend-red">pkgstats</span><span class="legend-green">2012</span><span class="legend-blue">2013</span></p>
 
 -   Honourable mentions: `gpicview`, `gthumb`, `sxiv`, `viewnior`.
 
-<a name="audio-players"></a>
+<a id="audio-players"></a>
 ### 3.2. Audio players
 
 <p></p>
 <canvas id="audio" width="700" height="300"></canvas>
-<p class="legend"><center><span class="legend-red">pkgstats</span><span class="legend-green">2012</span><span class="legend-blue">2013</span></center></p>
+<p class="legend"><span class="legend-red">pkgstats</span><span class="legend-green">2012</span><span class="legend-blue">2013</span></p>
 
 -   The `mpd` option in the 2012 survey included all its clients.
 -   Honourable mentions: `amarok`, `audacious`, `banshee`, `cmus`, `deadbeef`,
     `moc`, `rhythmbox`.
 
-<a name="video-players"></a>
+<a id="video-players"></a>
 ### 3.3. Video players
 
 <p></p>
 <canvas id="video" width="700" height="300"></canvas>
-<p class="legend"><center><span class="legend-red">pkgstats</span><span class="legend-green">2012</span><span class="legend-blue">2013</span></center></p>
+<p class="legend"><span class="legend-red">pkgstats</span><span class="legend-green">2012</span><span class="legend-blue">2013</span></p>
 
 -   The `mplayer` and `mplayer2` options in the 2012 survey included all their
     front-ends.
@@ -198,97 +198,97 @@ category in the 2013 survey.
     development.
 -   `mpv` is an actively developed fork of `mplayer2`.
 
-<a name="documents"></a>
+<a id="documents"></a>
 ## 4. Documents
 
-<a name="text-editors"></a>
+<a id="text-editors"></a>
 ### 4.1. Text editors
 
 <p></p>
 <canvas id="editor" width="700" height="300"></canvas>
-<p class="legend"><center><span class="legend-red">pkgstats</span><span class="legend-green">2012</span><span class="legend-blue">2013</span></center></p>
+<p class="legend"><span class="legend-red">pkgstats</span><span class="legend-green">2012</span><span class="legend-blue">2013</span></p>
 
 -   Honourable mentions: `geany`, `kate`, `leafpad`.
 
-<a name="latex-processors"></a>
+<a id="latex-processors"></a>
 ### 4.2. LaTeX processors
 
 <p></p>
 <canvas id="latex" width="700" height="300"></canvas>
-<p class="legend"><center><span class="legend-red">pkgstats</span><span class="legend-green">2012</span><span class="legend-blue">2013</span></center></p>
+<p class="legend"><span class="legend-red">pkgstats</span><span class="legend-green">2012</span><span class="legend-blue">2013</span></p>
 
-<a name="word-processors"></a>
+<a id="word-processors"></a>
 ### 4.3. Word processors
 
 <p></p>
 <canvas id="word" width="700" height="300"></canvas>
-<p class="legend"><center><span class="legend-red">pkgstats</span><span class="legend-green">2012</span><span class="legend-blue">2013</span></center></p>
+<p class="legend"><span class="legend-red">pkgstats</span><span class="legend-green">2012</span><span class="legend-blue">2013</span></p>
 
-<a name="spreadsheet-processors"></a>
+<a id="spreadsheet-processors"></a>
 ### 4.4. Spreadsheet processors
 
 <p></p>
 <canvas id="spreadsheet" width="700" height="300"></canvas>
-<p class="legend"><center><span class="legend-red">pkgstats</span><span class="legend-green">2012</span><span class="legend-blue">2013</span></center></p>
+<p class="legend"><span class="legend-red">pkgstats</span><span class="legend-green">2012</span><span class="legend-blue">2013</span></p>
 
-<a name="pdf-readers"></a>
+<a id="pdf-readers"></a>
 ### 4.5. PDF readers
 
 <p></p>
 <canvas id="pdf" width="700" height="300"></canvas>
-<p class="legend"><center><span class="legend-red">pkgstats</span><span class="legend-green">2012</span><span class="legend-blue">2013</span></center></p>
+<p class="legend"><span class="legend-red">pkgstats</span><span class="legend-green">2012</span><span class="legend-blue">2013</span></p>
 
 -   Honourable mentions: `acroread`, `apvlv`, `foxitreader`, `xpdf`.
 
-<a name="communication"></a>
+<a id="communication"></a>
 ## 5. Communication
 
-<a name="email-clients"></a>
+<a id="email-clients"></a>
 ### 5.1. Email clients
 
 <p></p>
 <canvas id="email" width="700" height="300"></canvas>
-<p class="legend"><center><span class="legend-red">pkgstats</span><span class="legend-green">2012</span><span class="legend-blue">2013</span></center></p>
+<p class="legend"><span class="legend-red">pkgstats</span><span class="legend-green">2012</span><span class="legend-blue">2013</span></p>
 
-<a name="irc-clients"></a>
+<a id="irc-clients"></a>
 ### 5.2. IRC clients
 
 <p></p>
 <canvas id="irc" width="700" height="300"></canvas>
-<p class="legend"><center><span class="legend-red">pkgstats</span><span class="legend-green">2012</span><span class="legend-blue">2013</span></center></p>
+<p class="legend"><span class="legend-red">pkgstats</span><span class="legend-green">2012</span><span class="legend-blue">2013</span></p>
 
-<a name="im-clients"></a>
+<a id="im-clients"></a>
 ### 5.3. IM clients
 
 <p></p>
 <canvas id="im" width="700" height="300"></canvas>
-<p class="legend"><center><span class="legend-red">pkgstats</span><span class="legend-green">2012</span><span class="legend-blue">2013</span></center></p>
+<p class="legend"><span class="legend-red">pkgstats</span><span class="legend-green">2012</span><span class="legend-blue">2013</span></p>
 
-<a name="internet"></a>
+<a id="internet"></a>
 ## 6. Internet 
 
-<a name="web-browsers"></a>
+<a id="web-browsers"></a>
 ### 6.1. Web browsers
 
 <p></p>
 <canvas id="web" width="700" height="300"></canvas>
-<p class="legend"><center><span class="legend-red">pkgstats</span><span class="legend-green">2012</span><span class="legend-blue">2013</span></center></p>
+<p class="legend"><span class="legend-red">pkgstats</span><span class="legend-green">2012</span><span class="legend-blue">2013</span></p>
 
 -   Honourable mentions: `elinks`, `links`, `luakit`, `uzbl`, `w3m`.
 
-<a name="bittorrent-clients"></a>
+<a id="bittorrent-clients"></a>
 ### 6.2. BitTorrent clients
 
 <p></p>
 <canvas id="bt" width="700" height="300"></canvas>
-<p class="legend"><center><span class="legend-red">pkgstats</span><span class="legend-green">2012</span><span class="legend-blue">2013</span></center></p>
+<p class="legend"><span class="legend-red">pkgstats</span><span class="legend-green">2012</span><span class="legend-blue">2013</span></p>
 
-<a name="version-control-systems"></a>
+<a id="version-control-systems"></a>
 ### 6.3. Version control systems
 
 <p></p>
 <canvas id="vcs" width="700" height="300"></canvas>
-<p class="legend"><center><span class="legend-red">pkgstats</span><span class="legend-green">2012</span><span class="legend-blue">2013</span></center></p>
+<p class="legend"><span class="legend-red">pkgstats</span><span class="legend-green">2012</span><span class="legend-blue">2013</span></p>
 
 [lnf12]: https://bbs.archlinux.org/viewtopic.php?id=138281
 [lnf13]: https://bbs.archlinux.org/viewtopic.php?id=174764
