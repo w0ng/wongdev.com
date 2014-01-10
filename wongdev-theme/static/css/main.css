@@ -166,7 +166,7 @@ h4 {
 }
 
 a {
-  color: #1c4a99;
+  color: #149;
   text-decoration: none;
 }
 
@@ -248,7 +248,7 @@ address {
     }
 
     .menu-link:hover {
-        background: #33343b;
+        background: #373b41;
         color: #c5c8c6;
     }
 
@@ -372,11 +372,11 @@ address {
 
     .btn-on {
         background: #eee;
-        color: #1c4a99;
+        color: #149;
     }
 
     .btn-on:hover {
-          border: 1px solid #1c4a99;
+          border: 1px solid #149;
           text-decoration: none;
     }
 
