@@ -14,11 +14,11 @@
 .err { color: #ac4142; } /* Error */
 .k { color: #81a2b2 } /* Keyword */
 .l { color: #cc6666 } /* Literal */
-.n { color: #b294bb } /* Name */
+.n { color: #c5c8c6 } /* Name */
 .o { color: #8abeb7 } /* Operator */
 .p { color: #c5c8c6 } /* Punctuation */
 .cm { color: #707880 } /* Comment.Multiline */
-.cp { color: #707880 } /* Comment.Preproc */
+.cp { color: #8abeb7 } /* Comment.Preproc */
 .c1 { color: #707880 } /* Comment.Single */
 .cs { color: #707880 } /* Comment.Special */
 .gd { color: #cc6666 } /* Generic.Deleted */
