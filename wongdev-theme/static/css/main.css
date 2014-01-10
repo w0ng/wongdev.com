@@ -183,7 +183,8 @@ samp {
 }
 
 pre {
-    border: 1px solid #ddd;
+    background: #1d1f21;
+    color: #c5c8c6;
     font-size: 0.8em;
     line-height: 1.2em;
     overflow: auto;
@@ -241,19 +242,19 @@ address {
     }
 
     .menu-link {
-        color: #999;
+        color: #707880;
         padding: 0.65em;
         text-decoration: none;
     }
 
     .menu-link:hover {
         background: #33343b;
-        color: #ddd;
+        color: #c5c8c6;
     }
 
     .active {
         background: #1d1f21;
-        color: #ddd;
+        color: #c5c8c6;
     }
 
     .site-title {
