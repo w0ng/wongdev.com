@@ -20,28 +20,29 @@
     <![endif]-->
     <header class="base-header">
         <div class="wrap">
-            <nav>
-                <p class="ib menu"><a class="site-title{%if not active_menu and not page %} active{% endif %}" href="{{ SITEURL }}/">{{ SITENAME }}</a></p>
+            <nav class="site-nav">
+                <p class="ib menu"><a class="site-title" href="{{ SITEURL }}/" title="Home">{{ SITENAME }}</a></p>
                 <ul class="ib menu">
+                    <li class="ib menu"><a class="menu-link{%if not active_menu and not page %} active{% endif %}" href="{{ SITEURL }}/" title="Home"><i class="icon-home"></i></a></li>
                     {% if ARCHIVES_URL %}
-                    <li class="ib"><a class="menu-link{%if active_menu == 'archives' %} active{% endif %}" href="{{ SITEURL }}/{{ ARCHIVES_URL }}"><i class="icon-archive"></i></a></li>
+                    <li class="ib"><a class="menu-link{%if active_menu == 'archives' %} active{% endif %}" href="{{ SITEURL }}/{{ ARCHIVES_URL }}" title="Archives"><i class="icon-archive"></i></a></li>
                     {% endif %}
                     {% if CATEGORIES_URL %}
-                    <li class="ib"><a class="menu-link{%if active_menu == 'categories' %} active{% endif %}" href="{{ SITEURL }}/{{ CATEGORIES_URL }}"><i class="icon-tag"></i></a></li>
+                    <li class="ib"><a class="menu-link{%if active_menu == 'categories' %} active{% endif %}" href="{{ SITEURL }}/{{ CATEGORIES_URL }}" title="Categories"><i class="icon-tags"></i></a></li>
                     {% endif %}
                     {% if TAGS_URL %}
-                    <li class="ib"><a class="menu-link{%if active_menu == 'tags' %} active{% endif %}" href="{{ SITEURL }}/{{ TAGS_URL }}"><i class="icon-tag"></i></a></li>
+                    <li class="ib"><a class="menu-link{%if active_menu == 'tags' %} active{% endif %}" href="{{ SITEURL }}/{{ TAGS_URL }}" title="Tags"><i class="icon-tags"></i></a></li>
                     {% endif %}
                     {% if DISPLAY_PAGES_ON_MENU %}
                     {% for p in PAGES %}
-                    <li class="ib"><a class="menu-link{% if p == page %} active{% endif %}" href="{{ SITEURL }}/{{ p.url }}">{% if p.title == 'Contact' %}<i class="icon-user"></i>{% else %}{{ p.title }}{% endif %}</a></li>
+                    <li class="ib"><a class="menu-link{% if p == page %} active{% endif %}" href="{{ SITEURL }}/{{ p.url }}" title="{{ p.title }}">{% if p.title == 'Contact' %}<i class="icon-info"></i>{% else %}{{ p.title }}{% endif %}</a></li>
                     {% endfor %}
                     {% endif %}
                     {% for title, link in MENUITEMS %}
-                    <li class="ib"><a class="menu-link" href="{{ link }}">{% if title == 'RSS' %}<i class="icon-rss"></i>{% else %}{{ title }}{% endif %}</a></li>
+                    <li class="ib"><a class="menu-link" href="{{ link }}" title="{{ title }}">{% if title == 'RSS' %}<i class="icon-rss"></i>{% else %}{{ title }}{% endif %}</a></li>
                     {% endfor %}
                 </ul><!-- /.menu -->
-            </nav>
+            </nav><!-- /.site-nav -->
         </div><!-- /.wrap -->
         <div class="main-heading">
             <div class="wrap mid-wrap">

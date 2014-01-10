@@ -235,6 +235,22 @@ address {
         background: #282A2E;
     }
 
+    /*
+     * Justified header elements:
+     * http://tympanus.net/codrops/2013/07/14/justified-and-vertically-centered-header-elements/
+     */
+
+    .site-nav {
+        text-align: justify;
+        margin-bottom: -1.8em;
+    }
+
+    .site-nav::after {
+        content: '';
+        display: inline-block;
+        width: 100%;
+    }
+
     .menu {
         line-height: 2.5em;
     }

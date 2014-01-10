@@ -270,3 +270,5 @@ category in the 2013 survey.
 [reddit]: http://www.reddit.com/r/archlinux/comments/1u0qvt/survey_most_popular_archlinux_apps_2013/
 [irc]: https://wiki.archlinux.org/index.php/IRC_Channel
 [stats]: https://www.archlinux.de/?page=Statistics
+
+<p></p>
