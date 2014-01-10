@@ -1,14 +1,15 @@
                         <footer class="article-footer">
-                            <p class="info">Published: <abbr title="{{ article.date.isoformat() }}">{{ article.locale_date }}</abbr></p>
+                            <p class="info"><i class="icon-clock light-color"></i> <abbr title="{{ article.date.isoformat() }}">{{ article.locale_date }}</abbr></p>
                             <nav>
                                 {% if article.author %}
-                                <address class="info">By: <a href="{{ SITEURL }}/{{ article.author.url }}">{{ article.author }}</a></address>
+                                <address class="info"><i class="icon-pencil light-color"></i> {% if article.author.url %}<a href="{{ SITEURL }}/{{ article.author.url }}">{{ article.author }}</a>{% else %}{{ article.author }}{% endif %}</address>
                                 {% endif %}
-                                {% if article.category %}
-                                <p class="ib info">In: <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a> |</p>
+                                {% if article.category and article.category.url %}
+                                <p class="info"><i class="icon-tag light-color"></i> <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a></p>
                                 {% endif %}
                                 {% if article.tags %}
-                                <ul class="ib info">
+                                <ul class="info">
+                                    <li class="ib"><i class="icon-tag light-color"></i></li>
                                     {% for tag in article.tags|sort %}
                                     <li class="ib"><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>{% if not loop.last %}, {% endif %}</li>
                                     {% endfor %}

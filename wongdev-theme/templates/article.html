@@ -14,7 +14,7 @@
             {{ translations.translations_for(article) }}
         </header><!-- /.article-header -->
         <section class="article-content">
-            <p class="article-date"><abbr title="{{ article.date.isoformat() }}">{{ article.locale_date }}</abbr></p>
+            <p class="light-color"><abbr title="{{ article.date.isoformat() }}">{{ article.locale_date }}</abbr></p>
             {{ article.content }}
         </section><!-- /.article-content -->
         {% include 'article-footer.html' %}

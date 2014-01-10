@@ -10,6 +10,7 @@
  * Use @import for YUI compressor css minifier on publish
  */
 @import url('normalize.css');
+@import url('fontello.css');
 @import url('pygment.css');
 
 /* ==========================================================================
@@ -115,8 +116,7 @@ textarea {
  * 3. Article summaries (index)
  *      3.1. Article info (article-footer)
  *      3.2. Next/prev pages (pagination)
- * 4. Article content (article)
- * 5. Helpers
+ * 4. Helpers
  */
 
 
@@ -237,19 +237,14 @@ address {
 
     .menu {
         line-height: 2.5em;
-        margin: 0;
-        padding: 0;
     }
 
     .menu-link {
+        border-left: 2px dotted #1D1F21;
         color: #707880;
+        margin-left: -0.25em; /* Adjust for space created by display: inline-block */
         padding: 0.65em;
         text-decoration: none;
-    }
-
-    .menu-link:hover {
-        background: #373b41;
-        color: #c5c8c6;
     }
 
     .active {
@@ -260,7 +255,16 @@ address {
     .site-title {
         color: #fff;
         font-weight: bold;
+        padding: 0.65em;
+        text-decoration: none;
         text-transform: uppercase;
+    }
+
+    .menu-link:hover,
+    .site-title:hover {
+        background: #373b41;
+        color: #c5c8c6;
+        text-decoration: none;
     }
 
     .main-heading {
@@ -330,10 +334,6 @@ address {
  * =========================
  */
 
-.count {
-    color: #999;
-}
-
 .entry {
     color: #333;
 }
@@ -380,19 +380,18 @@ address {
           text-decoration: none;
     }
 
-/* ============================
- * 4. Article content (article)
- * ============================
- */
-
-.article-date {
-    color: #999;
-}
-
 /* ==========
- * 5. Helpers
+ * 4. Helpers
  * ==========
  */
+
+/*
+ * Display non important text in the content area in light gray
+ */
+
+.light-color {
+    color: #999;
+}
 
 /*
  * Legends for bar charts created with chart.js
