@@ -14,7 +14,7 @@ and [#archlinux][irc]. [Overall statistics][stats] are based on displayed
 results collected with `pkgstats`. 
 
 At the time of writing, there are 526 responses to the 2012 survey, 527
-responses to the 2013 survey and 37,153,133 packages submitted via `pkgstats`.
+responses to the 2013 survey and 33,647 user submissions to `pkgstats`.
 Comparisons of apps were chosen based on the highest number of votes for each
 category in the 2013 survey.
 
