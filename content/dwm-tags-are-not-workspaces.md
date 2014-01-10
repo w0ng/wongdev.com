@@ -1,6 +1,6 @@
 Title: dwm: Tags are not workspaces
 Date: 2013-01-24
-Tags: dwm
+Tags: arch linux, dwm
 Category: arch linux
 Slug: dwm-tags-are-not-workspaces
 Author: w0ng

@@ -1,6 +1,6 @@
 Title: Most popular Arch Linux apps of 2013
 Date: 2014-01-09 08:25
-Tags: popular, applications, linux, survey
+Tags: arch linux, popular, applications, survey
 Category: arch linux
 Slug: most-popular-arch-linux-apps-2013
 Author: w0ng

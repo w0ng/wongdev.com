@@ -1,6 +1,6 @@
 Title: Pure btrfs installation
 Date: 2013-12-27 05:45
-Tags: install, partitionless, btrfs, ssd, backup, snapshots
+Tags: arch linux, install, partitionless, btrfs, ssd, backup, snapshots
 Category: arch linux
 Slug: pure-btrfs-installation
 Author: w0ng

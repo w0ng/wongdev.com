@@ -1,6 +1,6 @@
 Title: Octopress on Arch Linux
 Date: 2013-01-16 10:20
-Tags: octopress
+Tags: arch linux, octopress
 Category: arch linux
 Slug: octopress-on-arch-linux
 Author: w0ng
