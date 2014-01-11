@@ -42,7 +42,7 @@ PAGE_LANG_URL = '{slug}-{lang}/'
 PAGE_SAVE_AS = '{slug}/index.html'
 PAGE_URL = '{slug}/'
 
-DEFAULT_PAGINATION = 5
+DEFAULT_PAGINATION = 10
 PAGINATION_PATTERNS = (
     (1, '{base_name}/', '{base_name}/index.html'),
     (2, '{base_name}/page/{number}/', '{base_name}/page/{number}/index.html'),
