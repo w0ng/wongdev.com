@@ -65,9 +65,9 @@ EXTRA_PATH_METADATA = {
     'extra/robots.txt': {'path': 'robots.txt'},
     }
 
-MENUITEMS = (
-        ('RSS','http://wongdev.com/feeds/all.atom.xml'),
-)
-
 #DIRECT_TEMPLATES = (('index', 'tags', 'categories', 'authors', 'archives'))
 DIRECT_TEMPLATES = (('index', 'tags', 'archives'))
+
+FEED_ALL_ATOM = 'feed/all.atom.xml'
+TRANSLATION_FEED_ATOM = None
+CATEGORY_FEED_ATOM = None

@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:400,700|Inconsolata:400|Lora:400,400italic,700,700italic" type="text/css">
     <link rel="stylesheet" href="/css/main.css" type="text/css">
     {% if FEED_ALL_ATOM %}
-    <link rel="alternate" href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" title="{{ SITENAME }} Full Atom Feed" type="application/atom+xml">
+    <link rel="alternate" href="{% if FEEDBURNER_ALL_URL %}{{ FEEDBURNER_ALL_URL }}{% else %}{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}{% endif %}" title="{{ SITENAME }} Full Atom Feed" type="application/atom+xml">
     {% endif %}
     <script src="/js/vendor/modernizr-2.7.1.min.js"></script>
 </head>
@@ -39,8 +39,11 @@
                     {% endfor %}
                     {% endif %}
                     {% for title, link in MENUITEMS %}
-                    <li class="ib"><a class="menu-link{% if loop.last %} end-menu{% endif %}" href="{{ link }}" title="{{ title }}">{% if title == 'RSS' %}<i class="icon-rss"></i>{% else %}{{ title }}{% endif %}</a></li>
+                    <li class="ib"><a class="menu-link{% if loop.last and not FEED_ALL_ATOM %} end-menu{% endif %}" href="{{ link }}" title="{{ title }}">{{ title }}</a></li>
                     {% endfor %}
+                    {% if FEED_ALL_ATOM %}
+                    <li class="ib"><a class="menu-link end-menu" href="{% if FEEDBURNER_ALL_URL %}{{ FEEDBURNER_ALL_URL }}{% else %}{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}{% endif %}" title="RSS" rel="alternate" type="application/atom+xml"><i class="icon-rss"></i></a></li>
+                    {% endif %}
                 </ul><!-- /.menu -->
             </nav><!-- /.site-nav -->
         </div><!-- /.wrap -->
@@ -80,8 +83,11 @@
                     {% endfor %}
                     {% endif %}
                     {% for title, link in MENUITEMS %}
-                    <li><a class="base-footer-link" href="{{ link }}" title="{{ title }}"><i class="icon-{% if title == 'RSS' %}rss{% else %}tag{% endif %}"></i> {{ title }}</a></li>
+                    <li><a class="base-footer-link" href="{{ link }}" title="{{ title }}"><i class="icon-tag"></i> {{ title }}</a></li>
                     {% endfor %}
+                    {% if FEED_ALL_ATOM %}
+                    <li><a class="base-footer-link" href="{% if FEEDBURNER_ALL_URL %}{{ FEEDBURNER_ALL_URL }}{% else %}{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}{% endif %}" title="RSS" rel="alternate" type="application/atom+xml"><i class="icon-rss"></i> RSS</a></li>
+                    {% endif %}
                 </ul><!-- /.link-list /.base-footer-list -->
                 <ul class="base-footer-list base-footer-font">
                     <li><i class="icon-user"></i> Name: Andrew Wong</li>
