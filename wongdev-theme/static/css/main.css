@@ -134,7 +134,7 @@ textarea {
 }
 
 html {
-    background: #f8f8f8;
+    background: #1d1f21;
     font: 1.25em/1.8 'Lato', sans-serif;
 }
 
@@ -332,8 +332,9 @@ address {
      */
 
     .content {
-        padding: 2em 0;
+        background: #f8f8f8;
         font-family: 'Lora', serif;
+        padding: 2em 0;
     }
 
     /* =======================
@@ -342,11 +343,32 @@ address {
      */
 
     .base-footer {
-        border-top: 1px solid #ddd;
-        color: #666;
+        color: #707880;
         padding: 2em 0;
         text-align: center;
     }
+
+    .base-footer-font {
+        font: 0.7em/1.8 'Lato', sans-serif;
+    }
+
+    .base-footer-list {
+        display: inline-block;
+        list-style-type: none;
+        margin: 0 1em 2em 1em;
+        padding: 0;
+        text-align: left;
+    }
+
+    .base-footer-link {
+        color: #707880;
+    }
+
+    .base-footer-link:hover {
+        color: #f8f8f8;
+        text-decoration: none;
+    }
+
 
 /* =========================
  * 3. Blog summaries (index)

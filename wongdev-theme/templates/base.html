@@ -62,7 +62,36 @@
 
     <footer class="base-footer">
         <div class="wrap">
-            <p class="info">&copy; wongdev.com 2013-2014. Powered by <a href="http://getpelican.com/">Pelican</a>.</p>
+            <nav class="base-footer-nav">
+                <ul class="base-footer-list base-footer-font">
+                    <li><a class="base-footer-link" href="{{ SITEURL }}/" title="Home"><i class="icon-home"></i> Home</a></li>
+                    {% if ARCHIVES_URL %}
+                    <li><a class="base-footer-link" href="{{ SITEURL }}/{{ ARCHIVES_URL }}" title="Archives"><i class="icon-archive"></i> Archives</a></li>
+                    {% endif %}
+                    {% if CATEGORIES_URL %}
+                    <li><a class="base-footer-link" href="{{ SITEURL }}/{{ CATEGORIES_URL }}" title="Categories"><i class="icon-tags"></i> Categories</i></a></li>
+                    {% endif %}
+                    {% if TAGS_URL %}
+                    <li><a class="base-footer-link" href="{{ SITEURL }}/{{ TAGS_URL }}" title="Tags"><i class="icon-tags"></i> Tags</a></li>
+                    {% endif %}
+                    {% if DISPLAY_PAGES_ON_MENU %}
+                    {% for p in PAGES %}
+                    <li><a class="base-footer-link" href="{{ SITEURL }}/{{ p.url }}" title="{{ p.title }}"><i class="icon-{% if p.title == 'About' %}info{% else %}tag{% endif %}"></i> {{ p.title }}</a></li>
+                    {% endfor %}
+                    {% endif %}
+                    {% for title, link in MENUITEMS %}
+                    <li><a class="base-footer-link" href="{{ link }}" title="{{ title }}"><i class="icon-{% if title == 'RSS' %}rss{% else %}tag{% endif %}"></i> {{ title }}</a></li>
+                    {% endfor %}
+                </ul><!-- /.link-list /.base-footer-list -->
+                <ul class="base-footer-list base-footer-font">
+                    <li><i class="icon-user"></i> Name: Andrew Wong</li>
+                    <li><a class="base-footer-link" href="mailto:andrew@wongdev.com" title="Email me"><i class="icon-mail"></i> Email: andrew@wongdev.com</a></li>
+                    <li><a class="base-footer-link" href="https://github.com/w0ng" title="Fork me on GitHub"><i class="icon-github-circled"></i> GitHub: w0ng</a></li>
+                    <li><a class="base-footer-link" href="http://www.reddit.com/user/w0ng" title="My Reddit profile"><i class="icon-reddit"></i> Reddit: w0ng</a></li>
+                    <li><a class="base-footer-link" href="http://stackoverflow.com/users/2287928/w0ng" title="My Stack Overflow profile"><i class="icon-stackoverflow"></i> Stack Overflow: w0ng</a></li>
+                </ul><!-- /.link-list /.base-footer-list -->
+            </nav><!-- /.base-footer-nav -->
+            <p class="base-footer-font">&copy; wongdev.com 2013-2014. Powered by <a class="base-footer-link" href="https://github.com/getpelican/pelican">Pelican</a>. Subject to a <a class="base-footer-link" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons</a> license.</p>
         </div><!-- /.wrap -->
     </footer><!-- /.base-footer -->
 
