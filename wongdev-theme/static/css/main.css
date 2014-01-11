@@ -232,7 +232,7 @@ address {
      */
 
     .base-header {
-        background: #282A2E;
+        background: #282a2e;
     }
 
     /*
@@ -256,16 +256,20 @@ address {
     }
 
     .menu-link {
-        border-left: 2px dotted #1D1F21;
+        border-left: 2px dotted #1d1f21;
         color: #707880;
         margin-left: -0.25em; /* Adjust for space created by display: inline-block */
         padding: 0.65em;
         text-decoration: none;
     }
 
+    .end-menu {
+        border-right: 2px dotted #1d1f21;
+    }
+
     .active {
         background: #1d1f21;
-        color: #c5c8c6;
+        color: #f8f8f8;
     }
 
     .site-title {
@@ -279,7 +283,7 @@ address {
     .menu-link:hover,
     .site-title:hover {
         background: #373b41;
-        color: #c5c8c6;
+        color: #f8f8f8;
         text-decoration: none;
     }
 

@@ -35,11 +35,11 @@
                     {% endif %}
                     {% if DISPLAY_PAGES_ON_MENU %}
                     {% for p in PAGES %}
-                    <li class="ib"><a class="menu-link{% if p == page %} active{% endif %}" href="{{ SITEURL }}/{{ p.url }}" title="{{ p.title }}">{% if p.title == 'Contact' %}<i class="icon-info"></i>{% else %}{{ p.title }}{% endif %}</a></li>
+                    <li class="ib"><a class="menu-link{% if p == page %} active{% endif %}" href="{{ SITEURL }}/{{ p.url }}" title="{{ p.title }}">{% if p.title == 'About' %}<i class="icon-info"></i>{% else %}{{ p.title }}{% endif %}</a></li>
                     {% endfor %}
                     {% endif %}
                     {% for title, link in MENUITEMS %}
-                    <li class="ib"><a class="menu-link" href="{{ link }}" title="{{ title }}">{% if title == 'RSS' %}<i class="icon-rss"></i>{% else %}{{ title }}{% endif %}</a></li>
+                    <li class="ib"><a class="menu-link{% if loop.last %} end-menu{% endif %}" href="{{ link }}" title="{{ title }}">{% if title == 'RSS' %}<i class="icon-rss"></i>{% else %}{{ title }}{% endif %}</a></li>
                     {% endfor %}
                 </ul><!-- /.menu -->
             </nav><!-- /.site-nav -->
