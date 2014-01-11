@@ -647,3 +647,6 @@ FileETag None
 # <IfModule mod_headers.c>
 #    Header set Connection Keep-Alive
 # </IfModule>
+
+# Redirect missing blog index page
+Redirect 301 /blog/index.html /
