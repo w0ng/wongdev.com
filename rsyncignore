@@ -22,7 +22,6 @@
 .del-*
 .git/
 .hg/
-.htaccess
 .make.state
 .nse_depinfo
 .svn/

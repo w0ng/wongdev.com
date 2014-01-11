@@ -53,11 +53,13 @@ THEME_STATIC_DIR = ''
 
 STATIC_PATHS = [
     'img',
+    'extra/.htaccess',
     'extra/crossdomain.xml',
     'extra/humans.txt',
     'extra/robots.txt',
     ]
 EXTRA_PATH_METADATA = {
+    'extra/.htaccess': {'path': '.htaccess'},
     'extra/crossdomain.xml': {'path': 'crossdomain.xml'},
     'extra/humans.txt': {'path': 'humans.txt'},
     'extra/robots.txt': {'path': 'robots.txt'},
