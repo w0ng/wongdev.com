@@ -19,6 +19,8 @@ function size(animate){
             // The parent element is the div.canvas-container
             $(el).attr({
                 "width":$(el).parent().width(),
+                // "height":$(el).parent().outerHeight()
+                // keep height at 300px always
                 "height":300
             });
         });
@@ -36,7 +38,7 @@ $(window).on('resize', size);
 function redraw(animation){
     var options = {
         scaleLabel: "<%=value%>%",
-        scaleFontFamily: "'Lato', sans-serif",
+        scaleFontFamily: "'Open Sans', sans-serif",
         scaleFontColor: "#333",
         barValueSpacing: 15,
         animation:  false

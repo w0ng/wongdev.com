@@ -6,7 +6,7 @@
     {% block head %}
     {% endblock %}
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:400,700|Inconsolata:400|Lora:400,400italic,700,700italic" type="text/css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic|Inconsolata:400" type="text/css">
     <link rel="stylesheet" href="/css/main.css" type="text/css">
     {% if FEED_ALL_ATOM %}
     <link rel="alternate" href="{% if FEEDBURNER_ALL_URL %}{{ FEEDBURNER_ALL_URL }}{% else %}{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}{% endif %}" title="{{ SITENAME }} Full Atom Feed" type="application/atom+xml">
@@ -66,7 +66,7 @@
     <footer class="base-footer">
         <div class="wrap">
             <nav class="base-footer-nav">
-                <ul class="base-footer-list base-footer-font">
+                <ul class="base-footer-list base-footer-text">
                     <li><a class="base-footer-link" href="{{ SITEURL }}/" title="Home"><i class="icon-home"></i> Home</a></li>
                     {% if ARCHIVES_URL %}
                     <li><a class="base-footer-link" href="{{ SITEURL }}/{{ ARCHIVES_URL }}" title="Archives"><i class="icon-archive"></i> Archives</a></li>
@@ -89,7 +89,7 @@
                     <li><a class="base-footer-link" href="{% if FEEDBURNER_ALL_URL %}{{ FEEDBURNER_ALL_URL }}{% else %}{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}{% endif %}" title="RSS" rel="alternate" type="application/atom+xml"><i class="icon-rss"></i> RSS</a></li>
                     {% endif %}
                 </ul><!-- /.link-list /.base-footer-list -->
-                <ul class="base-footer-list base-footer-font">
+                <ul class="base-footer-list base-footer-text">
                     <li><i class="icon-user"></i> Andrew Wong</li>
                     <li><a class="base-footer-link" href="mailto:andrew@wongdev.com" title="Email me"><i class="icon-mail"></i> andrew@wongdev.com</a></li>
                     <li><a class="base-footer-link" href="https://github.com/w0ng" title="My GitHub profile"><i class="icon-github-circled"></i> github.com/w0ng</a></li>
@@ -97,7 +97,7 @@
                     <li><a class="base-footer-link" href="http://stackoverflow.com/users/2287928/w0ng" title="My Stack Overflow profile"><i class="icon-stackoverflow"></i> stackoverflow.com/u/2287928</a></li>
                 </ul><!-- /.link-list /.base-footer-list -->
             </nav><!-- /.base-footer-nav -->
-            <p class="base-footer-font">&copy; wongdev.com 2013-2014. Powered by <a class="base-footer-link" href="https://github.com/getpelican/pelican">Pelican</a>. Subject to a <a class="base-footer-link" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons</a> license.</p>
+            <p class="base-footer-text">&copy; wongdev.com 2013-2014. Powered by <a class="base-footer-link" href="https://github.com/getpelican/pelican">Pelican</a>. Subject to a <a class="base-footer-link" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons</a> license.</p>
         </div><!-- /.wrap -->
     </footer><!-- /.base-footer -->
 

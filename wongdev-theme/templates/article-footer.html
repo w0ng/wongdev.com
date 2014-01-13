@@ -1,14 +1,14 @@
                         <footer class="article-footer">
                             <nav>
                                 {% if article.author %}
-                                <address class="info"><i class="icon-user light-color"></i> {% if article.author.url %}<a href="{{ SITEURL }}/{{ article.author.url }}">{{ article.author }}</a>{% else %}{{ article.author }}{% endif %}</address>
+                                <address class="article-footer-text"><i class="icon-user light-color"></i> {% if article.author.url %}<a href="{{ SITEURL }}/{{ article.author.url }}">{{ article.author }}</a>{% else %}{{ article.author }}{% endif %}</address>
                                 {% endif %}
                                 {% if article.category and article.category.url %}
-                                <p class="info"><i class="icon-tag light-color"></i> <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a></p>
+                                <p class="article-footer-text"><i class="icon-tag light-color"></i> <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a></p>
                                 {% endif %}
-                                <p class="info"><i class="icon-clock light-color"></i> <abbr title="{{ article.date.isoformat() }}">{{ article.locale_date }}</abbr></p>
+                                <p class="article-footer-text"><i class="icon-clock light-color"></i> <abbr title="{{ article.date.isoformat() }}">{{ article.locale_date }}</abbr></p>
                                 {% if article.tags %}
-                                <ul class="info">
+                                <ul class="article-footer-text">
                                     <li class="ib"><i class="icon-tag light-color"></i></li>
                                     {% for tag in article.tags|sort %}
                                     <li class="ib"><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>{% if not loop.last %}, {% endif %}</li>

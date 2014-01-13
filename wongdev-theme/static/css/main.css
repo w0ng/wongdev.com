@@ -137,17 +137,15 @@ textarea {
 
 html {
     background: #1d1f21;
-    font: 1.25em/1.8 'Lato', sans-serif;
+    font: 1.125em/1.8 'Open Sans', sans-serif;
 }
 
 h1,
 h2,
 h3,
-h4,
-h5,
-h6 {
+h4 {
+    font-weight: normal;
     margin-top: 1.5em;
-    font: normal 1em/1.8 'Lato', sans-serif;
 }
 
 h1 {
@@ -185,10 +183,7 @@ samp {
 }
 
 pre {
-    background: #1d1f21;
-    border: none;
-    color: #c5c8c6;
-    font-size: 0.8em;
+    font-size: 0.9em;
     line-height: 1.2;
     overflow: auto;
     padding: 10px;
@@ -219,7 +214,7 @@ address {
 
 .wrap {
     margin: 0 auto;
-    max-width: 36em;
+    max-width: 40em;
     padding: 0 40px;
 }
 
@@ -261,7 +256,7 @@ address {
         border-left: 2px dotted #1d1f21;
         color: #707880;
         margin-left: -0.25em; /* Adjust for space created by display: inline-block */
-        padding: 0.65em;
+        padding: 0.6em;
         text-decoration: none;
     }
 
@@ -277,7 +272,7 @@ address {
     .site-title {
         color: #fff;
         font-weight: bold;
-        padding: 0.65em;
+        padding: 0.6em;
         text-decoration: none;
         text-transform: uppercase;
     }
@@ -301,7 +296,7 @@ address {
     }
 
     /*
-     * Vertical align:
+     * Vertical align main heading text
      * http://css-tricks.com/centering-in-the-unknown/
      * http://thephuse.com/development/the-best-way-to-vertically-align-in-css/
      */
@@ -324,7 +319,7 @@ address {
         content: '';
         display: inline-block;
         height: 100%;
-        margin-left: -0.25em; /* Adjust for space created by display: inline-block */
+        margin-left: -0.28em; /* Adjust for space created by display: inline-block */
         vertical-align: middle;
     }
 
@@ -335,7 +330,6 @@ address {
 
     .content {
         background: #f8f8f8;
-        font-family: 'Lora', serif;
         padding: 2em 0;
     }
 
@@ -350,8 +344,8 @@ address {
         text-align: center;
     }
 
-    .base-footer-font {
-        font: 0.7em/1.8 'Lato', sans-serif;
+    .base-footer-text {
+        font-size: 0.7em;
     }
 
     .base-footer-list {
@@ -395,6 +389,12 @@ address {
         border-top: 1px solid #ddd;
     }
 
+    .article-footer-text {
+        font-size: 0.8em;
+        margin: 0;
+        padding: 0;
+    }
+
     /* ==================================
      * 3.2. Next/prev pages (pagination)
      * ==================================
@@ -408,7 +408,7 @@ address {
         background: #eee;
         border: 1px solid #ddd;
         color: #999;
-        font: 0.8em/1.8 'Lato', sans-serif;
+        font-size: 0.8em;
         padding: 2px 10px;
         text-decoration: none;
     }
@@ -449,7 +449,7 @@ address {
 .legend-red,
 .legend-green,
 .legend-blue {
-    font: bold 0.6em/1.8 'Lato', sans-serif;
+    font-size: 0.7em;
     margin: 0 2em 0 0;
     padding: 0.25em 1em;
 }
@@ -483,16 +483,6 @@ address {
 
 .ib {
     display: inline-block;
-    margin: 0;
-    padding: 0;
-}
-
-/*
- * Display footer info in a smaller font
- */
-
-.info {
-    font: 0.8em/1.8 'Lato', sans-serif;
     margin: 0;
     padding: 0;
 }
