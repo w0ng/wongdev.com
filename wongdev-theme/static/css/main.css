@@ -38,11 +38,13 @@ html {
 
 ::-moz-selection {
     background: #b3d4fc;
+    color: #000;
     text-shadow: none;
 }
 
 ::selection {
     background: #b3d4fc;
+    color: #000;
     text-shadow: none;
 }
 
