@@ -1,18 +1,16 @@
 {% if DEFAULT_PAGINATION %}
+            {% if articles_page.has_previous() or articles_page.has_next()  %}
             <nav class="paginator">
+                {% if articles_page.has_previous() %}
                 <p class="ib">
-                    {% if articles_page.has_previous() %}
-                    <a class="prev-next btn-on" href="{{ SITEURL }}/{{ articles_previous_page.url }}">&lt; Prev</a>
-                    {% else %}
-                    <span class="prev-next">&lt; Prev</span>
-                    {% endif %}
+                    <a class="paginator-link" href="{{ SITEURL }}/{{ articles_previous_page.url }}"><i class="icon-left-open paginator-symbol"></i> Prev</a>
                 </p>
+                {% endif %}
+                {% if articles_page.has_next() %}
                 <p class="ib">
-                    {% if articles_page.has_next() %}
-                    <a class="prev-next btn-on" href="{{ SITEURL }}/{{ articles_next_page.url }}">Next &gt;</a>
-                    {% else %}
-                    <span class="prev-next">Next &gt;</span>
-                    {% endif %}
+                     <a class="paginator-link" href="{{ SITEURL }}/{{ articles_next_page.url }}">Next <i class="icon-right-open paginator-symbol"></i></a>
                 </p>
+                {% endif %}
             </nav><!-- /.paginator -->
+            {% endif %}
 {% endif %}
