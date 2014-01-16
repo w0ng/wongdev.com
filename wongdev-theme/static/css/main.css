@@ -184,17 +184,19 @@ pre,
 samp {
     background: #fff;
     border: 1px solid #ddd;
-    font-family: 'Inconsolata', monospace, serif;
+    font-family: 'Source Code Pro', monospace, serif;
 }
 
 pre {
-    line-height: 1.2;
+    font-size: 0.8em;
+    line-height: normal;
     overflow: auto;
     padding: 10px;
     white-space: pre;
 }
 
 code {
+    font-size: 0.9em;
     padding: 3px;
 }
 
