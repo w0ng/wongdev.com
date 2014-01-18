@@ -7,7 +7,7 @@ Summary: Brief notes taken from the book, Code Complete (2004), by Steve McConne
 
 These are brief notes taken from the book, <cite>[Code Complete
 (2004)][amazon]</cite>, by Steve McConnell. For more verbose notes, check out
-[this][review] extended review of the first edition. 
+[this][review] extended review of the first edition.
 
 This book is a language-independent best practices guide to programming.
 Despite being a decade old, the presented concepts are still relevant today.
@@ -16,11 +16,11 @@ complexity throughout all stages of the software development process.
 
 The book is most beneficial for [intermediate programmers][intermediate] in
 that you can't truly appreciate some of the concepts until you've had
-experience with them. This book can help you by either:
+experience with them. This book is helpful in two ways:
 
--   consolidating what you already know, by linking theories to practice. 
--   identify what you're doing badly, or good things that you're not doing
-    enough of.
+-   It consolidates what you already know, by linking theories to practice.
+-   It makes you aware of your bad habits and explains how to replace them with
+    good ones.
 
 These points are the basis for the notes I took.
 
@@ -209,7 +209,7 @@ Code tuning sacrifices readability and maintainability for performance.
 ## VI: System Considerations
 
 To find a project's "right-weight" methodology, scaling up a lightweight
-methodology is better than scaling down a heavyweight methodology. 
+methodology is better than scaling down a heavyweight methodology.
 
 For any project attribute, there's always some way of measuring that's better
 than not measuring at all.
