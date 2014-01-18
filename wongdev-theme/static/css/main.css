@@ -118,7 +118,8 @@ textarea {
  * 3. Article summaries (index)
  *      3.1. Article info (article-footer)
  *      3.2. Next/prev pages (pagination)
- * 4. Helpers
+ * 4. Article content (article)
+ * 5. Helpers
  */
 
 
@@ -413,8 +414,17 @@ address {
         text-transform: uppercase;
     }
 
+/* ============================
+ * 4. Article content (article)
+ * ============================
+ */
+
+.article-content {
+    padding-bottom: 2em;
+}
+
 /* ==========
- * 4. Helpers
+ * 5. Helpers
  * ==========
  */
 
